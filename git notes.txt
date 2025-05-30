@@ -75,3 +75,38 @@ You have to add it first using:
 ‘git add filename’    Then you can commit it using git commit.
 Or, to add all files (new + changed):
 ‘git add.’
+
+
+git commit: -
+git commit -m "Your message" means:
+Save your changes with a short message that describes what you did.
+
+git clone 
+git clone copies a remote Git project (repository) to your computer so you can work on it.
+What does git diff do?
+•	It shows you what changes you made in your files that are not saved (committed) yet.
+•	•  You change a file.
+•	•  Run git diff to see what you changed.
+Life Cycle of a Change in Git
+1. Modify Files
+You change your files on your computer. These changes are only on your disk — Git doesn’t track them yet.
+2. Check Changes
+Run:
+git diff
+to see what changes you made (not saved to Git yet).
+3.Stage Changes
+git add filename
+or
+git add .
+to tell Git: "I want to include these changes in the next save."
+4. Check Staged Changes
+git diff –staged
+to see what changes are ready to be saved (committed).
+5.Commit Changes
+git commit -m "Your message here"
+This saves your changes in Git history with a message describing what you did
+6.Push Changes (optional)
+If you use a remote repository (like GitHub), run:
+git push
+to send your saved changes to the remote server.
+
