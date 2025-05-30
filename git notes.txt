@@ -1,33 +1,11 @@
+What is Version Control?
 
-git commit: -
-git commit -m "Your message" means:
-Save your changes with a short message that describes what you did.
+Version control helps developers keep track of code changes, work together smoothly, and fix problems easily.
+Version control is a tool that helps you save your code step by step.
 
-git clone 
-git clone copies a remote Git project (repository) to your computer so you can work on it.
-What does git diff do?
-•	It shows you what changes you made in your files that are not saved (committed) yet.
-•	•  You change a file.
-•	•  Run git diff to see what you changed.
-Life Cycle of a Change in Git
-1. Modify Files
-You change your files on your computer. These changes are only on your disk — Git doesn’t track them yet.
-2. Check Changes
-Run:
-git diff
-to see what changes you made (not saved to Git yet).
-3.Stage Changes
-git add filename
-or
-git add .
-to tell Git: "I want to include these changes in the next save."
-4. Check Staged Changes
-git diff –staged
-to see what changes are ready to be saved (committed).
-5.Commit Changes
-git commit -m "Your message here"
-This saves your changes in Git history with a message describing what you did
-6.Push Changes (optional)
-If you use a remote repository (like GitHub), run:
-git push
-to send your saved changes to the remote server.
+Why Do Developers Use It?
+1.	Work Together – Many people can work on the same project without confusion.
+2.	Undo Mistakes – You can go back if something goes wrong.
+3.	See Changes – You can see what was changed and who changed it.
+4.	Try Ideas – You can test new code without changing the main project.
+5.	Stay Organized – It helps keep everything neat and safe.
