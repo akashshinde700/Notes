@@ -16,7 +16,7 @@ Popular Tool
 •	Git – The most common version control tool
 •	Used with websites like GitHub to share and manage code online
 •	You use Git to manage your code, then use GitHub to upload it, share it, or work with others.
-
+===============================================================================================
 
 Git	GitHub
 Git is a tool you install on your computer.	GitHub is a website where you can store and share your Git projects online.
