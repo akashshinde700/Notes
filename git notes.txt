@@ -1,11 +1,7 @@
-What is Version Control?
 
-Version control helps developers keep track of code changes, work together smoothly, and fix problems easily.
-Version control is a tool that helps you save your code step by step.
+Popular Tool
+•	Git – The most common version control tool
+•	Used with websites like GitHub to share and manage code online
+•	You use Git to manage your code, then use GitHub to upload it, share it, or work with others.
 
-Why Do Developers Use It?
-1.	Work Together – Many people can work on the same project without confusion.
-2.	Undo Mistakes – You can go back if something goes wrong.
-3.	See Changes – You can see what was changed and who changed it.
-4.	Try Ideas – You can test new code without changing the main project.
-5.	Stay Organized – It helps keep everything neat and safe.
+
