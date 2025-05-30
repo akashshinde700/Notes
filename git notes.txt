@@ -14,3 +14,43 @@ Popular Tool
 •	Git – The most common version control tool
 •	Used with websites like GitHub to share and manage code online
 •	You use Git to manage your code, then use GitHub to upload it, share it, or work with others.
+
+
+Git	GitHub
+Git is a tool you install on your computer.	GitHub is a website where you can store and share your Git projects online.
+It helps you track changes to your code.	It helps you store code online, collaborate with others, and show your projects.
+Works offline (on your local machine).	Works online, like Google Drive for code.
+Used to create commits, branches, and versions.	Used to host repositories, review code, and manage projects with teams.
+Created by developers for tracking code.	Owned by Microsoft and used by millions to share code
+
+
+git –-version command : -
+ is used to check if Git is installed on your computer and to see which version you have.
+
+git config :- 
+The git config command is used to set up and manage Git settings.
+You use it mainly to tell Git who you are (your name and email) and to configure other preferences like your default editor or how Git behaves.
+git config --global user.name "Your Name"
+git config --global user.email “you@example.com”
+
+This is important because Git uses your name and email in every commit.
+
+git config –list : -
+         show all settings
+
+What does --global mean?
+ --global: Applies the setting to all your Git projects.
+Without --global: Applies the setting to only the current project.
+
+The pwd command stands for:
+Print Working Directory
+
+
+git status — What It Does?
+The git status command shows you the current state of your Git project.
+It tells you what’s going on in your folder, like:
+•	Which files are changed
+•	Which files are staged (ready to commit)
+•	Which files are not tracked by Git
+•	Whether you're on the main branch, or a different one
+
