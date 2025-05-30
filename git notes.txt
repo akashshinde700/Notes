@@ -54,3 +54,24 @@ It tells you what’s going on in your folder, like:
 •	Which files are not tracked by Git
 •	Whether you're on the main branch, or a different one
 
+.git — What Is It?
+
+The .git folder is a hidden directory that Git creates when you run:
+‘git init’
+Git creates a hidden folder called .git in your project
+
+What Does It Do?
+The .git folder stores all the information about your Git project, including:
+•	The full history of your changes
+•	All your commits
+•	Your branches
+•	Configuration files
+•	And more
+It’s basically the brain of your Git project.
+git add :-
+git add is a Git command used to tell Git which files you want to include in your next commit.
+When you change a file, Git doesn’t save it automatically.
+You have to add it first using:
+‘git add filename’    Then you can commit it using git commit.
+Or, to add all files (new + changed):
+‘git add.’
