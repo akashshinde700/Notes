@@ -123,14 +123,14 @@ Life Cycle of a Change in Git
 What is a Commit ID?
 Every time you save your changes with git commit, Git creates a unique ID for that commit.
 This unique ID is called the commit ID or commit hash.
-It looks like a long string of letters and numbers, for example:
-e4f3a1b7c9d2e8f0a1234567890abcdef12345678
+It looks like a long string of letters and numbers.
 This ID helps Git and you to identify exactly which commit you are talking about.
 
 Why is Commit ID useful?
 • To see details of a specific commit.
 • To go back to an old commit (undo changes).
 • To share or refer to a specific commit with others.
+
 How to see commit IDs?
 Run this command: git log
 
@@ -148,7 +148,7 @@ Fixed bug in login feature
 Short commit ID
 You usually only need the first 7-8 characters to refer to a commit, for example:
 e4f3a1b
-
+===================================================================================================================================================================
 :q!
 If you are inside the Git commit editor (usually Vim) and want to exit without saving anything
 :q! means “Quit and ignore any changes”.
@@ -156,6 +156,17 @@ If you are inside the Git commit editor (usually Vim) and want to exit without s
 1. Press the Esc key on your keyboard (to make sure you are not typing).
 2. Type :q! (colon, then q, then exclamation mark).
 3. Press Enter.
+
+If you want to save your commit message and exit:
+Press the Esc key on your keyboard (just to be safe).
+
+Type :wq
+(That means: colon :, then w, then q)
+
+Press Enter.
+
+This will save your message and exit the editor.
+===================================================================================================================================================================
 
 What does git log -3 do?
 • It shows you the last 3 saved changes (commits) in your project.
