@@ -249,6 +249,13 @@ When do you use it?
 
 This will remove all the changes in that file and bring it back to the last commit.
 ===================================================================================================================================================================
+git commit -am "your message"
+This command:
+
+1. Adds all modified (already tracked) files to staging, and
+2. Commits them with a message.
+   Add + commit modified files (only tracked)
+===================================================================================================================================================================
 What is .gitignore?
 • It's a special file in your Git project.
 • It tells Git:
@@ -260,12 +267,6 @@ Some files should not go into Git, like:
 • Temporary files
 • node_modules/, dist/, \*.log files, etc.
 These files are usually for your computer only — not for sharing.
-
-Example .gitignore file:
-node_modules/
-.env
-\*.log
-dist/
 
 Git will only ignore untracked files.
 If a file is already being tracked, .gitignore won’t stop it.
@@ -283,18 +284,23 @@ What is a branch in Git?
 Why use branches?
 • To work on new features, fix bugs, or experiment.
 • So you don’t break the main project while trying something new.
+
 See all branches: git branch
 Shows the list of branches.
-The one with \* is your current branch.
-git branch new-branch-name :-
+The branch with * is your current branch.
+
+Create a New Branch :- git branch new-branch-name
 Creates a new branch, but doesn’t switch to it.
-git checkout branch-name or
-git switch branch-name:-
+
+git checkout branch-name or git switch branch-name :-
 Changes your working branch.
-Create & switch in one step: git checkout -b new-branch or git switch -c new-branch
+
+Create & switch in one step :- 
+git checkout -b new-branch or git switch -c new-branch
+
 ❌ Delete a branch:-
 git branch -d branch-name
-
+===================================================================================================================================================================
 What is git merge?
 • git merge is used to combine two branches together.
 • It takes the changes from one branch and applies them to the current branch.
@@ -310,21 +316,14 @@ git merge feature1 # Step 2: Merge feature1 into main
 Merge the other branch (e.g., feature) into current branch:
 git merge feature1
 Now main has all the changes from feature.
-
+===================================================================================================================================================================
 What if there’s a conflict?
 Git will pause and tell you:
 CONFLICT (content): Merge conflict in file.txt
 You need to open the file, fix it, then run:
 git add file.txt
 git commit
-
-git commit -am "your message"
-This command:
-
-1. Adds all modified (already tracked) files to staging, and
-2. Commits them with a message.
-   Add + commit modified files (only tracked)
-
+===================================================================================================================================================================
 What is a tag in Git?
 • A tag is like a label or bookmark for a specific commit.
 • It’s mostly used to mark important versions, like:
@@ -347,7 +346,7 @@ Delete a tag :- git tag -d v1.0
 Push tags to GitHub :-  
 git push origin v1.0 # push one tag
 git push origin --tags # push all tags
-
+===================================================================================================================================================================
 What is git stash?
 git stash lets you temporarily save your uncommitted changes, so you can switch branches or pull updates without losing your work.
 It’s like putting your work in a safe place for now, and restoring it later.
@@ -364,6 +363,7 @@ See your stash list:- git stash list
 Apply your stashed work back: git stash apply
 (Brings back the latest stashed changes)
 Remove the stash after applying: git stash drop or git stash pop
+===================================================================================================================================================================
 What is "upstream" in Git?
 Upstream means the remote branch your local branch is tracking (usually from GitHub or another remote server).
 It helps Git know where to pull changes from and where to push changes to.
@@ -400,6 +400,7 @@ Now push it and set upstream:
 git push -u origin feature-login
 
 From now on, just run git push or git pull from this branch — Git knows where.
+===================================================================================================================================================================
 Undo commits :-
 To undo commits in Git, there are different ways depending on what you want to do
 Undo the last commit, but keep changes in your files (soft reset):
@@ -426,7 +427,7 @@ It modifies your last commit. You can:
 1. Change the commit message
 2. Add files you forgot to include
    Git GUIs (Graphical User Interfaces)
-
+===================================================================================================================================================================
 If you prefer using buttons and visuals instead of terminal commands, Git GUIs are perfect for you!
 Here are some popular ones with simple descriptions:
 
