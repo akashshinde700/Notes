@@ -167,11 +167,10 @@ Press Enter.
 
 This will save your message and exit the editor.
 ===================================================================================================================================================================
-
 What does git log -3 do?
 • It shows you the last 3 saved changes (commits) in your project.
 • Run command :git log -3
-
+===================================================================================================================================================================
 git log -p
 shows commit history plus the exact code/text changes (diff) made in each commit.
 Commit info (ID, author, date, message)
@@ -179,7 +178,7 @@ Then, the diff showing:
 • Lines added (with +)
 • Lines removed (with -)
 This helps you see what changed inside files for every commit.
-
+===================================================================================================================================================================
 What does git log --stat do?
 • It shows the commits with summary of changes:
 o Which files changed
@@ -197,7 +196,7 @@ src/login.js | 10 +++++-----
 src/utils.js | 4 ++--
 2 files changed, 7 insertions(+), 7 deletions(-)
 Quickly see what files changed in each commit and how big the changes were without seeing full code diff.
-
+===================================================================================================================================================================
 git log –-oneline
 • Shows a short and simple list of your commits.
 • Each commit is shown in one line with:
@@ -210,7 +209,7 @@ a1b2c3d Fixed login bug
 f4e5d6a Added new feature
 123abcd Initial commit
 This is useful when you want a quick overview of all commits without too much detail.
-
+===================================================================================================================================================================
 What does git show do?
 git show shows you details of the most recent commit (or any specific commit you ask for).
 It includes:
@@ -223,7 +222,7 @@ git show
 This shows the latest commit with all the changes
 git show <commit-id>
 If you want to see a specific commit, use its commit
-
+===================================================================================================================================================================
 What is HEAD in Git?
 • HEAD means:
 👉 “Where you are right now” in your Git project history.
