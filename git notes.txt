@@ -235,6 +235,10 @@ Go back to previous commit temporarily
 git checkout HEAD~1
 You move one step behind current commit
 
+Meaning of HEAD~1:
+• Refers to 1 commit before the current one
+• You can do HEAD~2 for 2 commits back, and so on
+===================================================================================================================================================================
 What does git restore do?
 • git restore is used to undo changes in your files.
 • It helps you go back to the last saved version (from your last commit or stage).
@@ -244,7 +248,7 @@ When do you use it?
 • git restore --source id <filename>
 
 This will remove all the changes in that file and bring it back to the last commit.
-
+===================================================================================================================================================================
 What is .gitignore?
 • It's a special file in your Git project.
 • It tells Git:
@@ -271,7 +275,7 @@ git rm --cached filename
 git restore .gitignore
 This command restores the .gitignore file to its last committed version.
 So if you changed .gitignore but didn't commit yet, this will undo your changes
-
+===================================================================================================================================================================
 What is a branch in Git?
 • A branch is like a separate workspace where you can try changes without affecting the main code.
 • The default branch is usually called main or master.
@@ -415,9 +419,7 @@ git revert <commit-id>
 Adds a new commit that reverses changes
 Safer for shared repos (GitHub, team work)
 
-Meaning of HEAD~1:
-• Refers to 1 commit before the current one
-• You can do HEAD~2 for 2 commits back, and so on
+
 What git commit –-amend
 It modifies your last commit. You can:
 
