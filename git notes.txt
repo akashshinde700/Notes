@@ -302,20 +302,18 @@ git checkout -b new-branch or git switch -c new-branch
 git branch -d branch-name
 ===================================================================================================================================================================
 What is git merge?
-• git merge is used to combine two branches together.
-• It takes the changes from one branch and applies them to the current branch.
+• git merge is a Git command used to combine the changes from one branch into another
+Basic Syntax :-git merge <branch-name>
+
 Example Situation:
+1. You're working on the main branch
+2. You create a new branch called feature1 to work on a new feature.
+3. After finishing your changes in feature1, you want to bring those changes into main.
 
-1. You’re on the main branch.
-2. You created a branch called feature1 and made some changes there.
-3. Now you want to bring those changes back into main.
-
-git checkout main # Step 1: Switch to main branch
-git merge feature1 # Step 2: Merge feature1 into main
-
-Merge the other branch (e.g., feature) into current branch:
-git merge feature1
-Now main has all the changes from feature.
+Commands:
+git checkout main       # Step 1: Switch to main branch
+git merge feature1      # Step 2: Merge changes from feature1 into main
+Now, the main branch will include all the commits from feature1.
 ===================================================================================================================================================================
 What if there’s a conflict?
 Git will pause and tell you:
@@ -325,27 +323,35 @@ git add file.txt
 git commit
 ===================================================================================================================================================================
 What is a tag in Git?
-• A tag is like a label or bookmark for a specific commit.
-• It’s mostly used to mark important versions, like:
-o v1.0
-o v2.0-beta
-o release-2025
-• To remember or refer back to important points in your project’s history.
-• Commonly used for releases, deployments, or milestones.
-Lightweight tag – just a name pointing to a commit :- git tag v1.0
+• A tag in Git is like a label or bookmark that points to a specific commit in your project's history.
 
-Annotated tag – with message, author, date (more common) :-
-git tag -a v1.0 -m "Version 1.0 release"
-See all tags :- git tag
-See a specific tag details:- git show v1.0
+Why Use Tags?
+To mark important points, like:
+v1.0
+v2.0-beta
+release-2025
 
-Tag a specific old commit:- git tag -a v1.0 <commit-id> -m "Old version tag"
+Commonly used for:
+Releases
+Deployments
+Milestones
 
-Delete a tag :- git tag -d v1.0
+ Types of Tags
+1. Lightweight Tag :- git tag v1.0
+A simple pointer to a commit (like a branch, but doesn't move).
 
-Push tags to GitHub :-  
-git push origin v1.0 # push one tag
-git push origin --tags # push all tags
+2. Annotated Tag (recommended) :- git tag -a v1.0 -m "Version 1.0 release"
+Includes metadata: tag message, author, date, and can be signed.
+
+Working with Tags
+List all tags:- git tag
+Show details of a specific tag:- git show v1.0
+Tag an old commit:- git tag -a v1.0 <commit-id> -m "Tagging old version"
+Delete a tag:- git tag -d v1.0
+
+Sharing Tags with Remote (like GitHub)
+Push a single tag:- git push origin v1.0
+Push all tags:- git push origin --tags
 ===================================================================================================================================================================
 What is git stash?
 git stash lets you temporarily save your uncommitted changes, so you can switch branches or pull updates without losing your work.
