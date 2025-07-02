@@ -45,8 +45,70 @@ console.log(typeof uniqueId); // "symbol"
 let bigNumber = BigInt(1234567890123456789012345678901234567890);
 console.log(typeof bigNumber); // "bigint"
 
+--------------------------------------------------------------------------------------------------------
 
 ii>non-primitive (reference) types:
          Used to store collections of values. (hold multiple values and are mutable)
+
+
+// 1. Object = a collection of key-value pairs , Objects can contain properties and methods, and they are mutable.
+
+let person = {
+  name: "John",
+  age: 30,
+  isActive: true,
+};
+console.log(typeof person);
+
+// 2. Array = a special type of object used to store ordered collections of values. Arrays can hold multiple values in a single variable, and they are also mutable.
+let numbers = [1, 2, 3, 4, 5];
+console.log(typeof numbers);
+
+// 3. Function = Reusable block of code
+function greet() {
+  console.log("Hello!");
+  console.log(typeof greet);
+}
+
+// 4. Date = a built-in object that represents dates and times. It provides methods for manipulating and formatting dates.
+let currentDate = new Date();
+console.log(typeof currentDate);
+
+// 5. RegExp = a built-in object that provides a way to work with regular expressions, which are patterns used to match character combinations in strings.
+let regex = /ab+c/;
+console.log(typeof regex);
+
+// 6. Map (ES6) = a collection of key-value pairs where keys can be of any type. Maps maintain the insertion order of elements and allow for efficient retrieval of values based on keys.
+let map = new Map();
+console.log(typeof map);
+
+// 7. Set (ES6) = a collection of unique values. Sets are useful for storing distinct values and preventing duplicates.
+let set = new Set();
+console.log(typeof set);
+
+// 8. WeakMap (ES6) = a collection of key-value pairs where keys are objects and values can be of any type. WeakMaps do not prevent garbage collection of keys, making them useful for memory management.
+let weakMap = new WeakMap();
+console.log(typeof weakMap);
+
+// 9. WeakSet (ES6) = a collection of unique objects. WeakSets do not prevent garbage collection of their objects, making them useful for memory management.
+let weakSet = new WeakSet();
+console.log(typeof weakSet);
+
+// 10. ArrayBuffer (ES6)= a low-level object that represents a fixed-length binary data buffer. It is used to handle binary data in JavaScript, especially when working with typed arrays.
+let buffer = new ArrayBuffer(16);
+console.log(typeof buffer);
+
+// 11. Typed Arrays (ES6) = special array-like objects that provide a way to read and write binary data in a more efficient manner. Typed arrays are backed by an ArrayBuffer and allow for different numeric types.
+let intArray = new Int32Array(buffer);
+console.log(typeof intArray);
+
+// 12. Promise (ES6) = an object representing the eventual completion (or failure) of an asynchronous operation and its resulting value. Promises are used to handle asynchronous operations in a more manageable way.
+let promise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("Operation completed successfully!");
+  }, 1000);
+  console.log(typeof promise);
+});
+
 
 
