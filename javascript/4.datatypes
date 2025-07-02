@@ -1,6 +1,7 @@
                                   Datatypes
 
 data types define the kind of value a variable can hold.
+
 i> primitive data types :
          They represent single values and are immutable. (You can't change the value)
 
