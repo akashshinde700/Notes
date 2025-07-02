@@ -1,0 +1,112 @@
+                                                   Programming Language
+
+Programming Language is a way to give commands to your  system
+
+i>understand by humans 
+ii>understand by computer/machine also
+
+why need programming language?
+
+programming language helps us talk to computers and tell them exactly what to do 
+
+
+--------------------------------------------------------------------------------------------------------
+
+                                                Introduction To JavaScript
+
+JavaScript is high level,interpreted programming language ,used to create interactive and dynamic behavior on website.                            
+
+high level means - JavaScript closer to human language, so it is easy to read and write.
+interpreted means -JavaScript code is run line by line
+
+JavaScript lets websites respond when you click, move, or type—making them feel alive.
+
+JavaScript runs in the browser to make pages interactive and on servers (with Node.js) to handle data and backend logic.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+📜 JavaScript Evolution Timeline
+1995
+🔹 Brendan Eich created JavaScript at Netscape in just 10 days. //ब्रेन-डन आइच
+🔹 Originally named Mocha, then LiveScript, and finally JavaScript.
+
+1996
+🔹 Microsoft released JScript, its own version of JavaScript for Internet Explorer.
+
+1997
+🔹 JavaScript was officially standardized as ECMAScript (ECMA-262) by ECMA International.
+
+2009
+🔹 Node.js was introduced by Ryan Dahl, enabling JavaScript to run on servers (outside the browser).
+
+2015 – ES6 (ECMAScript 2015)
+🔹 A major update that modernized JavaScript:
+
+let, const for block-scoped variables
+
+Arrow functions (=>)
+
+Classes and Modules
+
+Promises for async code
+
+Template literals (${} syntax)
+
+Destructuring, default parameters, spread/rest operators, and more
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+Now (Today) // WHere We can use
+
+🔹 JavaScript is everywhere:
+
+🌐 Web Apps – React, Angular, Vue
+
+📱 Mobile Apps – React Native, NativeScript
+
+💻 Desktop Apps – Electron
+
+🌍 Servers – Node.js
+
+📡 IoT Devices, Game Dev, AI, and beyond
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+why is it called javascript?
+
+JavaScript got its name mainly for marketing reasons, not because it’s closely related to Java.
+
+JavaScript’s syntax borrows mainly from Java, but it also takes inspiration from C, C++, Perl, Awk, and even Python in some areas.
+Here’s a quick breakdown of what it borrows:
+- 🧱 Java, C, and C++: Basic structure like if, for, while, curly braces {}, semicolons ;, and variable declarations.
+- 🧪 Perl and Awk: Influenced JavaScript’s regular expressions and scripting-style flexibility.
+- 🐍 Python: Some influence in its dynamic typing and ease of use.
+- 🧬 Self: Inspired JavaScript’s prototype-based object model (instead of class-based like Java).
+So while the name “JavaScript” might suggest it’s a sibling of Java, it’s more like a mashup of several languages—with its own unique personality.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+                                             IDE (Integrated Development Environment)
+
+IDE is a software tool that helps you write, test, and debug code more efficiently—all in one place.
+
+✅ Main Features of an IDE
+
+Code Editor – Write and edit your code
+Compiler / Interpreter – Convert code to machine language
+Debugger – Find and fix errors
+Syntax Highlighting – Colors to easily spot code elements
+Code Autocomplete – Suggests code while typing
+Project/File Explorer – Organizes files and folders
+Terminal/Console – Run code directly inside the IDE
+Extensions/Plugins – Add new features (like Git, Linters, Themes)
+
+| IDE/Editor       | Description                                   |
+| ---------------- | --------------------------------------------- |
+| **VS Code**      | Most popular, lightweight, and extensible IDE |
+| **WebStorm**     | Powerful JS IDE by JetBrains (paid)           |
+| **Sublime Text** | Fast, minimal editor with plugin support      |
+| **Atom**         | Open-source editor by GitHub (now deprecated) |
+| **Brackets**     | Beginner-friendly, focused on web development |
+--------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
