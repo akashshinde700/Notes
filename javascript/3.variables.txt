@@ -1,0 +1,29 @@
+variable is container for storing data values
+
+keywords to declare variables in JavaScript:
+var, let, const
+
+// Variable declaration syntax
+// var variableName = value; // var is function scoped or globally scoped
+syntax:
+keywords variablename = value;
+
+//var is function scoped or globally scoped, and can be redeclared and reassigned
+var title = "learn javascript";
+var title = "learn javascript again"; // redeclaring a var variable
+title = "learn javascript once more"; // reassigning a var variable
+
+// console.log(title);
+
+// let is block scoped and not redeclarable but reassignable
+let firstName = "John";
+// let firstName = "Jane"; // This will throw an error because let does not allow redeclaration
+firstName = "John Doe"; // This is allowed as it is a reassignmentS
+// console.log(firstName);
+
+
+// const is block scoped, not redeclarable, and not reassignable
+const lastName = "Doe";
+const lastName = "Doe"; // This will throw an error because const does not allow redeclaration
+lastName = "Smith"; // This will also throw an error because const does not allow reassignment
+console.log(lastName);
