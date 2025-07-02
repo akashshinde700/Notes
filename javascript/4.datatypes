@@ -1,0 +1,51 @@
+                                  Datatypes
+
+data types define the kind of value a variable can hold.
+i> primitive data types :
+         They represent single values and are immutable. (You can't change the value)
+
+//1. String = Textual data
+
+let greeting = "Hello, World!"; // Double quotes for a simple one-line string
+
+let greeting = 'Hello, "Akash"'; // Single quotes can contain double quotes — valid for single-line strings only
+
+let greeting = `hello,
+Akash what's up`; // Backticks (template literals) allow multi-line strings
+console.log(typeof greeting); // "string"
+
+
+// 2. Number = Integer or floating-point numbers
+
+let age = 30;
+console.log(typeof age); 
+
+// 3. Boolean =  Logical value: true or false  
+
+let isActive = true;
+console.log(typeof isActive); 
+
+// 4. Undefined = Declared but not assigned
+
+let notAssigned;
+console.log(typeof notAssigned); 
+
+// 5. Null = Explicitly no value
+let emptyValue = null;
+console.log(typeof emptyValue); 
+
+// 6. Symbol (ES6) = Unique and immutable identifier (ES6)
+
+let uniqueId = Symbol("id");
+console.log(typeof uniqueId); // "symbol"
+
+// 7. BigInt (ES11) = Large integers beyond safe Number range
+
+let bigNumber = BigInt(1234567890123456789012345678901234567890);
+console.log(typeof bigNumber); // "bigint"
+
+
+ii>non-primitive (reference) types:
+         Used to store collections of values. (hold multiple values and are mutable)
+
+
