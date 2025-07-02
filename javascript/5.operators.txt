@@ -1,0 +1,94 @@
+                                   operators
+
+operators are special symbols used to perform operations on values and variables. 
+They’re the building blocks of expressions and logic in your code.
+
+Arithmetic operator:
+ arithmetic operators are used to perform basic math operations on numbers.
+
+let a = 20;
+let b = 10;
+
+console.log(a + b); // Add the two numbers: 20 + 10 = 30
+console.log(a - b); //Subtract second from first: 20 - 10 = 10
+console.log(a * b); //Multiply the numbers: 20 × 10 = 200
+console.log(a / b); // Divide the first by the second: 20 ÷ 10 = 2
+console.log(a % b); //what’s left after dividing. 20 ÷ 10 = 2 with nothing left.So remainder is 0
+console.log(a ** b); // This means power (exponent).If a = 2 and b = 3 → 2 ** 3 = 2 × 2 × 2 = 8
+
+a++; // a = a+1; out : 21
+b++; // b = b+1; out : 11
+console.log(a);
+console.log(b);
+
+a--; // a = a-1;
+b--; // b = b-1;
+console.log(a, b);
+
+let a = 20;
+console.log(++a); //21
+console.log(a++); //21
+console.log(a); //22
+console.log(a--); //22 ===next 21
+console.log(--a); //21-1 =20
+console.log(a); //20
+
+=================================================================================================================================================
+
+Assignment operators:
+
+are used to assign values to variables.(= ,+=,-=,*=,/=,**=,%=)
+The most basic one is =, but there are many others that combine assignment with arithmetic or logical operations.
+
+let a = 45;
+
+a += 5; // a = a + 5     → 50
+console.log("After += 5:", a);
+
+a -= 10; // a = a - 10    → 40
+console.log("After -= 10:", a);
+
+a *= 2; // a = a * 2     → 80
+console.log("After *= 2:", a);
+
+a /= 4; // a = a / 4     → 20
+console.log("After /= 4:", a);
+
+a **= 2; // a = a ** 2    → 400
+console.log("After **= 2:", a);
+
+a %= 250; // a = a % 250   → 150 (400 % 250 = 150)
+console.log("After %= 250:", a);
+
+===================================================================================================================================================
+
+Comparison operators:
+
+are used to compare two values and return a Boolean (`true` or `false`).
+
+// Equal to (loose equality) – compares only values
+console.log(5 == "5"); // true → values are equal, types are ignored
+
+// Equal value and type (strict equality)
+console.log(5 === "5"); // false → value is same, but number ≠ string
+
+// Not equal (loose inequality)
+console.log(5 != "5"); // false → values are equal, so inequality is false
+
+// Not equal value or type (strict)
+console.log(5 !== "5"); // true → types differ (number vs string)
+
+// Greater than
+console.log(7 > 3); // true → 7 is greater
+
+// Less than
+console.log(3 < 7); // true → 3 is less
+
+// Greater than or equal to
+console.log(5 >= 5); // true → 5 equals 5
+
+// Less than or equal to
+console.log(4 <= 3); // false → 4 is not less than or equal to 3
+
+===================================================================================================================================================
+
