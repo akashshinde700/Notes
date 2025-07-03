@@ -1,0 +1,214 @@
+                                               Function
+
+A function is a reusable block of code that does a specific task.
+You can create it once, and use (call) it again and again.
+
+                                               Example
+
+function sayHello() {
+  console.log("Hello, world!");
+}
+
+sayHello()  // Hello, world!
+
+===================================================================================================================================================
+
+1. Function Declaration
+
+This means creating or writing a function.
+
+Example :
+
+function greet() {
+  console.log("Hello!");
+}
+
+You are declaring (creating) a function named greet which will say “Hello!”.
+
+===================================================================================================================================================
+
+2. Function Reference
+This means mentioning the function’s name without calling it.
+
+Example :
+
+greet;
+
+You are referring to the function greet, but you are not running it.
+
+===================================================================================================================================================
+
+3. Function Calling
+This means running or executing a function.
+
+Example :
+
+greet();
+
+===================================================================================================================================================
+
+4. Parameters
+These are placeholders used in the function when you declare it.
+
+Example :
+
+function greetUser(name) {
+  console.log("Hello, " + name);
+}
+
+name is a parameter – a placeholder that says, "I’m expecting a value."
+
+===================================================================================================================================================
+
+5. Arguments
+These are the actual values you pass when calling the function.
+
+Example:
+
+greetUser("Akash");
+
+"Akash" is the argument – the real value given to the function.
+
+//Summary 
+
+Function Declaration = Creating a function
+Function Reference = Mentioning the function name (not running it)
+Function Calling = Running the function
+Parameter = Placeholder in the function definition
+Argument = Real value given during function call
+
+===================================================================================================================================================
+
+return :
+It sends back a value from the function to wherever the function was called.
+"return" means give this value back to the caller.
+
+✅ Used for:
+✅ Getting results
+✅ Saving results in a variable
+✅ Doing further work with the value
+
+Example :
+
+function add(a, b) {
+  return a + b;
+}
+
+let result = add(3, 5);
+console.log(result); // Output: 8
+
+===================================================================================================================================================
+
+console.log : 
+It prints the output on the screen (usually in the browser console or terminal).
+console.log" means show this message on the screen (for me to see).
+
+✅ Used for:
+✅ Checking values
+✅ Debugging code
+✅ Showing messages to the developer
+
+===================================================================================================================================================
+                                       
+                                       Types Of functions
+
+1. Named Function (Function Declaration)
+✅ A normal function with a name.
+
+ function greet() {
+  console.log("Hello!");
+}
+greet();
+
+Use when you want to reuse the function by name.
+
+2. Anonymous Function
+✅ A function without a name, often used inside variables
+
+let sayHi = function() {
+  console.log("Hi there!");
+};
+sayHi();
+
+Used when you don't need a name or use it only once.
+
+3. Arrow Function (ES6)
+✅ A shorter way to write functions
+
+let add = (a, b) => a + b;
+console.log(add(3, 4)); // Output: 7
+
+Used for small, quick functions.
+
+4. Function Expression
+✅ A function stored in a variable.
+
+let multiply = function(x, y) {
+  return x * y;
+};
+console.log(multiply(2, 5)); // Output: 10
+
+Function expressions are not hoisted (they must be defined before use).
+
+5. Immediately Invoked Function Expression (IIFE)
+✅ A function that runs immediately after it's defined.
+
+(function() {
+  console.log("I ran immediately!");
+})();
+
+Used to run code once and protect variables (private scope).
+
+6. Constructor Function
+✅ A function used to create objects.
+
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+}
+
+let p1 = new Person("Akash", 25);
+console.log(p1.name); // Output: Akash
+
+Used when you want to create many similar objects.
+
+7. Generator Function
+✅ A special function that can pause and resume using yield.
+
+function* countUp() {
+  yield 1;
+  yield 2;
+  yield 3;
+}
+
+let counter = countUp();
+console.log(counter.next().value); // 1
+
+Used for controlled sequences, like loops with pause.
+
+8. Callback Function
+✅ A function passed into another function as an argument.
+
+function greet(name, callback) {
+  console.log("Hello, " + name);
+  callback();
+}
+
+greet("Akash", function() {
+  console.log("This is a callback!");
+});
+
+Used a lot in async code, like fetching data or handling events.
+--------------------------------------------------------------------
+| Type                 | Description                               |
+| -------------------- | ----------------------------------------- |
+| Named Function       | Regular function with a name              |
+| Anonymous Function   | Function without a name                   |
+| Arrow Function       | Short form using `=>`                     |
+| Function Expression  | Function stored in a variable             |
+| IIFE                 | Runs immediately after creation           |
+| Constructor Function | Creates objects using `new`               |
+| Generator Function   | Can pause with `yield`                    |
+| Callback Function    | Passed as an argument to another function |
+--------------------------------------------------------------------
+
