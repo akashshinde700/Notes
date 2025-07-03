@@ -1,0 +1,294 @@
+                                              JavaScript Control Flow
+
+Control flow means the order in which your code runs — from top to bottom.
+But sometimes, you don’t want every line to run in order.
+
+You may want to:
+i>Run some code only if a condition is true
+ii>Run code again and again in a loop
+iii>Skip some code
+iv>Stop a loop early
+
+Control flow helps you do that using conditions and loops.
+
+===================================================================================================================================================
+                                            1. Conditional Statements
+
+                                            if, else if, else :
+
+Used to run code based on conditions.
+Used to make decisions.
+
+let age = 18;
+
+if (age >= 18) {
+  console.log("You are an adult");
+} else {
+  console.log("You are a minor");
+}
+
+If the condition is true, run the first block.
+Else, run the second block.
+
+===================================================================================================================================================
+
+                                                    switch
+
+Used when you have many choices.
+An alternative to multiple if...else if conditions.
+
+let day = "Monday";
+
+switch (day) {
+  case "Monday":
+    console.log("Start of the week");
+    break;
+  case "Friday":
+    console.log("Weekend is near");
+    break;
+  default:
+    console.log("Another day");
+}
+
+🔹 Use break to stop the execution once a case matches.
+🔹 default runs when no case matches.
+
+break : stops the switch after a matching case runs.
+default : Runs if no case matches
+Like the else in if...else.
+
+===================================================================================================================================================
+
+                                               2. Loops (Iteration)
+                                            
+Used to run code again and again                                            
+
+===================================================================================================================================================
+
+                                                for Loop
+
+Runs a block a specific number of times.
+repeats a set number of times
+
+for (let i = 1; i <= 3; i++) {
+  console.log(i); // 1, 2, 3
+}
+
+==================================================================================================================================================
+
+                                                while Loop
+
+Runs while a condition is true.
+
+let i = 1;
+while (i <= 3) {
+  console.log(i);
+  i++;
+} // 1,2,3
+
+===================================================================================================================================================
+
+                                                do...while
+
+runs once, then checks the condition
+
+let i = 1;
+do {
+  console.log(i);
+  i++;
+} while (i <= 3);
+
+===================================================================================================================================================
+
+                                                for...of Loop
+
+The for...of loop is used to loop through values in an iterable object like:
+
+i>Arrays
+ii>Strings
+iii>Sets
+iv>Maps (keys, values, entries)     
+
+                                                Examples:
+
+                                          1.Loop through an Array
+
+let fruits = ["apple", "banana", "cherry"];
+
+for (let fruit of fruits) {
+  console.log(fruit);
+} //apple , banana , cherry
+
+Each time, fruit holds one value from the array.
+
+                                         2.Loop through a String
+
+let word = "Hi";
+
+for (let char of word) {
+  console.log(char);
+} 
+
+Output:
+H
+i
+
+Loops through each character in the string.
+
+                                        3.Loop through a Set
+
+let ids = new Set([101, 102, 103]);
+
+for (let id of ids) {
+  console.log(id);
+}// 101 ,102, 103
+
+                                        4.Map
+
+A Map is a special object in JavaScript that stores key-value pairs.
+✅ Keys can be any type (not just strings)
+✅ Keeps the insertion order
+
+                                       Example
+
+Creating a Map 
+
+let myMap = new Map();
+
+myMap.set("name", "Alice");
+myMap.set("age", 25);
+myMap.set("city", "Pune");
+
+1. Loop through entries (default)
+
+for (let [key, value] of myMap) {
+  console.log(key, ":", value);
+}
+
+output:
+
+name : Alice
+age : 25
+city : Pune
+
+2. Loop through keys
+
+for (let key of myMap.keys()) {
+  console.log(key);
+}
+
+output :
+
+name
+age
+city
+
+3. Loop through values
+
+for (let value of myMap.values()) {
+  console.log(value);
+}
+
+output :
+
+Alice
+25
+Pune
+
+===================================================================================================================================================
+
+                                              for...in Loop
+
+Loops over object properties.                                              
+Loop through properties of an object
+Get keys and values
+
+                                              Example
+
+Loop through an Object
+
+let person = {
+  name: "Alice",
+  age: 25,
+  city: "Pune"
+};
+
+for (let key in person) {
+  console.log(key + ": " + person[key]);
+}
+
+output:
+
+name: Alice
+age: 25
+city: Pune
+
+🔹 key gets each property name (like "name", "age", etc.)
+🔹 person[key] gets the value ("Alice", 25, "Pune")
+
+===================================================================================================================================================
+
+                                                    break and continue
+
+These are used inside loops (for, while, etc.) to control the flow.
+
+                                                    break
+
+break — stop the loop
+It stops the loop completely and jumps out of it.
+
+for (let i = 1; i <= 5; i++) {
+  if (i === 3) {
+    break; // stop the loop when i is 3
+  }
+  console.log(i);
+} // 1, 2
+
+When i is 3, break stops the loop.
+
+                                                    continue
+
+continue — skip to next turn
+It skips the current loop turn and moves to the next iteration
+
+for (let i = 1; i <= 5; i++) {
+  if (i === 3) {
+    continue; // skip when i is 3
+  }
+  console.log(i);
+}//1, 2, 4, 5
+
+When i is 3, continue skips that number and continues the loop.
+
+===================================================================================================================================================
+
+                                                    Ternary Operator
+
+The ternary operator is a shortcut way to write if...else in one line.
+
+                                                    syntax:
+
+condition ? value_if_true : value_if_false;
+
+                                                    Example
+
+let age = 18;
+
+let result = age >= 18 ? "Adult" : "Minor";
+
+console.log(result);
+
+output:
+
+Adult
+
+🔹 If age >= 18 is true → result is "Adult"
+🔹 If false → result is "Minor"
+
+===================================================================================================================================================
+
+
+
+
+
+
