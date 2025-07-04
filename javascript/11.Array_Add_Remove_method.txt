@@ -1,0 +1,217 @@
+                                                                 Array Methods
+
+                                                         1. Adding / Removing Items (8)
+
+===================================================================================================================================================                                                         
+                                                             ✅ 1. push()
+
+Adds an element at the end of the array
+
+                                                             ✅Syntax
+
+array.push()
+
+                                                             ✅Example
+
+let fruits = ['apple', 'banana'];
+fruits.push('orange');
+console.log(fruits); // ['apple', 'banana', 'orange']
+
+                                                             ✅ Explanation:
+
+Original Array:
+['apple', 'banana']
+push('orange')
+→ Adds 'orange' to the end of the array
+The push() method modifies the original array                                                             
+
+===================================================================================================================================================
+
+                                                             ✅ 2. pop()
+
+Removes the last element from the array
+
+                                                             ✅Syntax
+
+array.pop()  
+
+                                                             ✅Example
+
+let fruits = ['apple', 'banana', 'orange'];
+fruits.pop();
+console.log(fruits); // ['apple', 'banana']
+
+                                                             ✅ Explanation:
+
+Original Array:
+['apple', 'banana', 'orange']
+pop()
+→ Removes the last element of the array
+→ 'orange' is removed
+The pop() method modifies the original array
+→ It also returns the removed value (if needed)                                                             
+
+===================================================================================================================================================
+
+                                                             ✅ 3. unshift()
+
+Adds an element at the beginning of the array
+
+                                                             ✅Syntax
+
+array.unshift()
+
+                                                             ✅Example
+
+let fruits = ['banana', 'orange'];
+fruits.unshift('apple');
+console.log(fruits); // ['apple', 'banana', 'orange']
+
+                                                            ✅ Explanation:
+
+Original Array:
+['banana', 'orange']
+unshift('apple')
+→ Adds 'apple' to the beginning of the array
+→ Shifts existing items to the right
+unshift() modifies the original array
+→ It also returns the new length of the array (not shown here)                                                            
+
+===================================================================================================================================================
+
+                                                             ✅ 4. shift()
+
+Removes the first element from the array
+
+                                                             ✅Syntax
+
+array.shift()
+
+                                                             ✅Example
+
+let fruits = ['apple', 'banana', 'orange'];
+fruits.shift();
+console.log(fruits); // ['banana', 'orange']
+
+                                                             ✅ Explanation:
+
+'apple' (first element) is removed
+Array becomes: ['banana', 'orange']
+The removed item 'apple' is stored in the variable removed
+
+===================================================================================================================================================
+
+                                                             ✅ 5. splice(start, deleteCount, item1, item2, ...)
+
+Used to add or remove items from an array at a specific position.
+It changes the original array.
+
+                                                             ✅Syntax
+
+array.splice(startIndex, numberToRemove, itemToAdd1, itemToAdd2, ...);
+
+                                                            ✅Example
+
+let fruits = ['apple', 'banana', 'orange'];
+
+// Remove 1 item at index 1
+fruits.splice(1, 1);
+console.log(fruits); // ['apple', 'orange']
+
+                                                            ✅Explanation: 
+
+Start from index 1 → 'banana'
+Remove 1 item
+So 'banana' is removed
+
+                                                            ✅Example
+
+// Add 'grape' at index 1
+fruits.splice(1, 0, 'grape');
+console.log(fruits); // ['apple', 'grape', 'orange']
+
+                                                            ✅Explanation: 
+
+Start at index 1
+Remove 0 items (just insert)
+Add 'grape' at that position
+
+===================================================================================================================================================
+
+                                                            ✅ 6. slice(start, end)
+
+slice() method does NOT change or affect the original array.
+
+                                                            ✅Syntax
+
+array.slice(start, end)
+
+                                                            ✅Example
+
+let fruits = ['apple', 'banana', 'orange', 'grape'];
+let sliced = fruits.slice(1, 3);
+console.log(sliced); // ['banana', 'orange']
+console.log(fruits); // ['apple', 'banana', 'orange', 'grape']
+
+                                                            ✅Explanation: 
+
+slice(1, 3) means:
+Start at index 1 → 'banana'
+Go up to (but not including) index 3 → 'grape' is not included
+So it gives: ['banana', 'orange']
+
+💡 Original array is still the same
+
+sliced is the new array: ['banana', 'orange']
+fruits is the original array, and it stays the same: ['apple', 'banana', 'orange', 'grape']
+
+===================================================================================================================================================
+
+                                                           ✅7. fill(value, start, end)
+
+It fills part of an array with the same value.
+
+                                                           ✅Syntax
+
+array.fill(value, start, end)
+
+                                                           ✅Example
+
+let numbers = [1, 2, 3, 4];
+numbers.fill(0, 1, 3);
+console.log(numbers); // [1, 0, 0, 4]
+
+                                                           ✅Explanation: 
+
+fill(0, 1, 3) means:
+Start from index 1
+Stop before index 3
+Fill with value 0
+So, index 1 and 2 get replaced with 0
+Final array: [1, 0, 0, 4]
+
+===================================================================================================================================================
+
+                                                           ✅ 8. copyWithin(target, start, end)
+
+It copies part of the array and pastes it to another position (overwriting existing  values).                 
+
+                                                           ✅Syntax
+
+array.copyWithin(target, start, end)
+
+                                                           ✅Example
+
+let numbers = [1, 2, 3, 4, 5];
+numbers.copyWithin(1, 3); 
+console.log(numbers); // [1, 4, 5, 4, 5]
+
+                                                           ✅Explanation: 
+
+copyWithin(1, 3) means:
+Copy from index 3 to the end → [4, 5]
+Paste it starting at index 1
+So, 2 and 3 get replaced
+Final array: [1, 4, 5, 4, 5]
+
+===================================================================================================================================================
