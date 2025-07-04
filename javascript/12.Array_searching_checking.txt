@@ -1,0 +1,193 @@
+                                                     2. Searching / Checking
+
+==================================================================================================================================================                                                     
+                                                        ✅1. includes()
+
+Checks if an array contains a specific value.
+
+                                                        ✅Syntax:
+
+array.includes(value)
+
+                                                        ✅Example
+
+let fruits = ['apple', 'banana', 'orange'];
+console.log(fruits.includes('banana')); // true
+console.log(fruits.includes('grape'));  // false
+
+                                                        ✅ Explanation:
+
+Returns true if 'banana' is found in the array
+Returns false if the value doesn't exist      
+
+===================================================================================================================================================
+
+                                                        ✅ 2. indexOf()
+
+Returns the first index of the value. If not found, returns -1.
+
+                                                        ✅Syntax:
+
+array.indexOf(value)
+
+                                                        ✅Example
+
+let colors = ['red', 'blue', 'green', 'blue'];
+console.log(colors.indexOf('blue')); // 1
+console.log(colors.indexOf('yellow')); // -1
+
+                                                        ✅ Explanation:
+
+The array is:
+['red', 'blue', 'green', 'blue']
+'blue' appears twice:
+At index 1
+At index 3
+indexOf('blue') will return 1
+
+→ because it finds the first 'blue' from the left side
+
+===================================================================================================================================================
+
+                                                        ✅ 3. lastIndexOf()
+
+Returns the last index of the value. If not found, returns -1
+
+                                                        ✅Syntax:
+
+array.lastIndexOf(value)
+
+                                                        ✅Example
+
+let colors = ['red', 'blue', 'green', 'blue'];
+console.log(colors.lastIndexOf('blue')); // 3
+console.log(colors.lastIndexOf('yellow')); // -1
+
+                                                        ✅ Explanation:
+
+The array is:
+['red', 'blue', 'green', 'blue']
+'blue' appears twice:
+First at index 1
+Last at index 3
+lastIndexOf('blue') will return 3
+
+→ because that's the last place 'blue' is found
+Means 'yellow' is not found.
+
+===================================================================================================================================================
+
+                                                        ✅4. find()
+
+Returns the first item that matches a condition.
+
+                                                        ✅Syntax:
+
+array.find(callback)
+
+                                                        ✅Example
+
+let nums = [3, 8, 12, 5];
+let found = nums.find(num => num > 10);
+console.log(found); // 12
+
+                                                        ✅ Explanation:
+
+Finds and returns the first number greater than 10
+
+===================================================================================================================================================
+
+                                                        ✅ 5. findIndex()
+
+Returns the index of the first item that matches a condition. If not found, returns -1.
+
+✅Syntax:
+
+array.findIndex(callback)
+
+✅Example
+
+let numbers = [5, 12, 8, 130, 44];
+let index = numbers.findIndex(num => num > 10);
+console.log(index); // 1
+
+✅ Explanation:
+
+Array: [5, 12, 8, 130, 44]
+Condition: num > 10 (we want the first number greater than 10)
+Step-by-step:
+5 → ❌ not > 10
+12 → ✅ match found!
+
+→ Returns index 1
+
+let index = numbers.findIndex(num => num > 200);
+console.log(index); // -1
+
+
+===================================================================================================================================================
+
+                                                             ✅ 6. some()
+
+Checks if at least one item passes a test. Returns true or false.
+
+                                                             ✅Syntax:
+
+array.some(callback)
+
+                                                             ✅Example
+
+let numbers = [3, 7, 10, 15];
+let result = numbers.some(num => num > 10);
+console.log(result); // true
+
+
+                                                             ✅ Explanation:
+
+Array: [3, 7, 10, 15]
+Condition: num > 10
+Step-by-step:
+3 → ❌
+7 → ❌
+10 → ❌
+15 → ✅ ✅ ✅
+
+→ At least one match found → returns true
+
+===================================================================================================================================================
+
+                                                             ✅ 7. every()
+
+Checks if all items pass a test. Returns true or false.
+
+                                                             ✅Syntax:
+
+array.every(callback)
+
+                                                             ✅Example
+
+let numbers = [10, 20, 30];
+
+let result = numbers.every(num => num > 5);
+console.log(result); // true
+
+                                                             ✅ Explanation:
+
+Array: [10, 20, 30]
+Condition: num > 5
+Step-by-step:
+10 > 5 → ✅
+20 > 5 → ✅
+30 > 5 → ✅
+
+→ All are greater than 5 → returns true
+
+let result = numbers.every(num => num > 15);
+console.log(result); // false
+
+                                                             ✅ Explanation:
+
+10 is not > 15 → ❌
+→ So it stops and returns false
+
+===================================================================================================================================================
