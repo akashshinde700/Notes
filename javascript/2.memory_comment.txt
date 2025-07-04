@@ -1,11 +1,15 @@
-                                      🧠 What is Memory?
+                                                          🧠 What is Memory?
 
 Memory is the part of a computer where data is stored and accessed during processing. It helps the CPU (brain of the computer) perform tasks by holding instructions, data, and results temporarily or permanently.
 
-Types of Memory in Computers
+===================================================================================================================================================
 
-1. Primary Memory (Main Memory)
+                                                         Types of Memory in Computers
+
+                                                         1. Primary Memory (Main Memory)
+
 Used directly by the CPU while programs are running.
+
 🔹 RAM (Random Access Memory)
 Temporary memory. Stores data while programs are open.
 Data is lost when the computer is turned off.
@@ -16,7 +20,9 @@ Data stays even when power is off.
 
 Think of RAM as your workspace while working. ROM is like a user manual for starting your computer.
 
-2. Secondary Memory (Storage Memory)
+
+                                                          2. Secondary Memory (Storage Memory)
+
 Stores data permanently for long-term use.
 
 🔹 Examples:
@@ -24,30 +30,30 @@ HDD (Hard Disk Drive), SSD (Solid State Drive), USB drives, CDs, DVDs
 
 💡 Think of secondary memory like a filing cabinet where you save your files and projects.
 
+===================================================================================================================================================
 
-🛠️ Memory in Programming (like JavaScript)
+                                                         🛠️ Memory in Programming (like JavaScript)
+
 When a program runs, memory is used to store:
 
 ✅ Variables and data
-
 🔁 Functions and objects
-
 🧮 Intermediate results and temporary values
 
 In JavaScript, memory is divided into:
 
 Stack – For primitive values (small and fixed-size like numbers, booleans)
-
 Heap – For reference types (like objects, arrays, functions)
 
 🔁 Volatile vs Non-Volatile Memory
-Volatile Memory – Data is lost when power is off (e.g., RAM)
 
+Volatile Memory – Data is lost when power is off (e.g., RAM)
 Non-Volatile Memory – Data is saved permanently (e.g., ROM, HDD, SSD)
 
 JavaScript uses Primary Memory (RAM) for Stack and Heap during runtime.
 
----------------------------------------------------------------------------------------------------------------------------------------------------
+===================================================================================================================================================
+
                                                 Comments in JavaScript
 
 Comments are lines in the code that are not executed. They are used to explain what the code does, make it easier to read, or temporarily disable code.
@@ -70,5 +76,6 @@ This is a multi-line comment.
 It can span multiple lines.
 Useful for detailed descriptions.
 */
-let age = 25;
----------------------------------------------------------------------------------------------------------------------------------------------------
+
+===================================================================================================================================================
+
