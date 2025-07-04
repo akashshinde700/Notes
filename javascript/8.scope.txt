@@ -1,0 +1,105 @@
+                                                      scope
+
+Scope means:
+👉 Where can you use (or access) a variable in your code
+
+===================================================================================================================================================
+                                                     
+                                                      1. Global Scope
+
+If you create a variable outside of any function or block, it is global.
+You can use this variable anywhere in your code.
+
+                                                      Example
+
+let name = "Akash"; // Global
+
+function sayHi() {
+  console.log(name); // You can use it here
+}
+
+sayHi();
+console.log(name); // You can use it here too
+
+===================================================================================================================================================
+
+                                                      2. Local Scope
+
+A variable declared inside a function.
+It can only be accessed within that function.     
+
+                                                      Example
+
+function sayHello() {
+  let message = "Hello World"; // local scope
+  console.log(message); // works
+}
+
+sayHello();
+// console.log(message); // ❌ Reference Error: message is not defined  
+
+===================================================================================================================================================
+
+                                                      3. Block Scope (let and const)
+
+Introduced in ES6.
+A variable declared inside { } (curly braces) with let or const is only accessible within that block.                                                      
+
+                                                      Example
+
+{
+  let a = 10;
+  const b = 20;
+  console.log(a, b); // ✅ Works
+}
+
+// console.log(a, b); // ❌ Error
+
+❗ var does not have block scope — it gets hoisted to the function/global scope.
+
+===================================================================================================================================================
+
+                                                     4. Function Scope
+
+Variables declared with var, let, or const inside a function are only accessible within that function.
+
+                                                     Example
+
+function test() {
+  var x = 1;
+  let y = 2;
+  const z = 3;
+  console.log(x, y, z); // ✅ Works
+}
+
+// console.log(x, y, z); // ❌ Error
+
+===================================================================================================================================================
+
+                                                     5. Lexical Scope (Static Scope)
+
+A function can access variables from its parent (outer) scope.
+JavaScript uses lexical scoping: scope is determined by the position of functions in the source code.
+Lexical scoping means that the scope of a variable is determined by its position in the source code (during writing, not runtime). 
+A function remembers the scope in which it was defined, not where it is executed.   
+A child function can use the parent’s variables.But a parent function cannot use the child’s variables.
+
+
+                                                     Example
+
+function outer() {
+  let outerVar = "I'm outside!";
+  
+  function inner() {
+    console.log(outerVar); // ✅ Accesses outer scope variable
+  }
+  
+  inner();
+}
+
+outer();
+
+Declared with - Nested functions
+Accesible where -Inner functions access outer variables
+
+===================================================================================================================================================
