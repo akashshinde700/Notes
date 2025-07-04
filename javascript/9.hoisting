@@ -1,0 +1,149 @@
+                                                      Hoisting 
+
+When JavaScript runs your code, it automatically moves all the var variable declarations and function declarations to the top of their scope (top of the file or function).
+But — only the declarations, not the values.
+
+                                                      Example
+
+console.log(a);
+var a = 10;
+
+When JavaScript runs this code, it does hoisting. That means:
+
+It moves the declaration of a to the top of the code.
+But it does not move the value (10) to the top.
+
+🔧 Behind the scenes, JavaScript does this:
+
+var a;           // only declaration is moved to top
+console.log(a);  // a is declared but has no value → so it prints: undefined
+a = 10;          // now a gets the value 10
+
+                                                      Output:
+
+undefined
+
+===================================================================================================================================================
+
+                                                      🧠 Temporal Dead Zone (TDZ) means:
+
+The time between entering the scope and the line where let or const is declared — in that time, you cannot use the variable.
+Variables declared with let and const are hoisted to the top but stay in the "Temporal Dead Zone" until the line where they are declared
+
+                                                       Example
+
+let and const are hoisted but not initialized                                                       
+
+{
+  console.log(x); // ❌ ReferenceError: Cannot access 'x' before initialization
+  let x = 10;  or 
+  const x = 10;
+}
+
+In the example below, lines 43 to 46 are inside the Temporal Dead Zone (TDZ).
+
+
+{
+  console.log(x);       // 🔴 Line 43 → ❌ ReferenceError (TDZ)
+  console.log(akash);   // 🔴 Line 44 → ❌ ReferenceError (TDZ)
+  console.log(shinde);  // 🔴 Line 45 → ❌ ReferenceError (TDZ)
+  let x = 10;           // 🔵 Line 46 → Declaration happens here
+  let akash = "hello";
+  const shinde = "world";
+}
+
+===================================================================================================================================================
+
+                                                     Class Hoisting
+
+Classes are not hoisted like functions.
+
+                                                     Example
+
+const obj = new Person(); // ❌ ReferenceError
+class Person {}
+
+Like let and const, class declarations exist in the Temporal Dead Zone (TDZ).
+
+===================================================================================================================================================
+
+                                                      Function Hoisting
+
+Function Declarations are hoisted
+
+                                                      Example
+
+greet(); // ✅ Works
+
+function greet() {
+  console.log("Hello!");
+}
+
+The whole function is hoisted, so you can call it before its declaration.
+
+Behind the scenes, it's like this:
+
+// JavaScript already knows this function
+function greet() {
+  console.log("Hello!");
+}
+
+// Now this line runs without error
+greet(); // Prints: Hello!
+
+Why it works:
+Because JavaScript moves function declarations to the top — this is called hoisting.
+
+===================================================================================================================================================
+
+                                                        Hoisting in Function Scope
+
+Variables declared inside a function are hoisted to the top of the function, not globally.
+
+                                                        Example
+
+function test() {
+  console.log(a); // undefined
+  var a = 10;
+}
+test();
+
+Behind the scenes, it's like this:
+
+function test() {
+  var a;
+  console.log(a); // undefined
+  a = 10;
+}
+
+===================================================================================================================================================
+
+                                                         Function Expressions are NOT hoisted like declarations
+
+var sayHi is hoisted as undefined, so trying to call it gives an error.
+
+                                                         Example
+
+sayHi(); // ❌ TypeError: sayHi is not a function
+
+var sayHi = function() {
+  console.log("Hi!");
+};
+
+var sayHi is hoisted as undefined, so trying to call it gives an error.
+
+===================================================================================================================================================
+
+                                                         Arrow Functions are NOT hoisted
+
+Arrow functions act like const variables — hoisted but not initialized.                                                         
+
+                                                         Example
+
+greet(); // ❌ TypeError
+
+const greet = () => {
+  console.log("Hi");
+};
+
+===================================================================================================================================================
