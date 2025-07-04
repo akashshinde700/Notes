@@ -163,7 +163,7 @@ Useful when building a longer string piece by piece.
 
 ===================================================================================================================================================
 
-                                                          🧩 Other Useful Operators
+                                                            Other Useful Operators
 
 ? : (Ternary Operator)
 Shorthand for if-else.
