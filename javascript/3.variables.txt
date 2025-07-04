@@ -28,3 +28,6 @@ const lastName = "Doe";
 const lastName = "Doe"; // This will throw an error because const does not allow redeclaration
 lastName = "Smith"; // This will also throw an error because const does not allow reassignment
 console.log(lastName);
+
+===================================================================================================================================================
+
