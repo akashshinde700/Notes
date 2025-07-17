@@ -1,0 +1,63 @@
+﻿                                                   Programming Language
+
+Programming Language is a way to give commands to your system
+
+i>understand by humans
+ii>understand by computer/machine also
+
+why need programming language?
+
+programming language helps us talk to computers and tell them exactly what to do
+
+================================================================================================================================
+
+                                               Software Prerequisites to Learn Java
+
+Java Development Kit (JDK):
+This is the main tool you need to write and run Java programs.
+
+Text Editor or IDE (Code Editor)
+You need a place to write your Java code. You can use:
+VS Code – simple and beginner-friendly
+
+=================================================================================================================================
+
+                                                  Introduction to Java Programming
+
+Java is a computer programming language that was created in 1991 by a company called Sun Microsystems,
+which is now owned by Oracle Corporation.
+It was developed by two people named James Gosling and Patrick Naughton.
+
+Java is Object-oriented ,General-purpose, Robust, Platform-independent language means
+
+Object-oriented :
+Java uses "objects" to build programs.
+An object is like a real-world thing (for example: a car, a dog, or a book).
+
+Each object has:
+Data (like the color or size)
+Actions (like drive, bark, or open)
+
+So, Java makes programs by using these objects, just like how we see things in real life.
+
+General-purpose :
+general-purpose means Java is not limited to just one use — it can be used almost anywhere
+
+You can use Java to make:
+
+Mobile apps (like Android apps)
+Computer software (like calculators or games)
+Web applications (like online shopping sites)
+Big business systems (used by banks, schools, etc.)
+
+Robust:
+Java is robust because it keeps working even if there are small problems in the code.
+It can handle mistakes (errors) in the program without crashing.
+It helps programmers find and fix problems easily.
+
+Platform-independent:
+Java programs can run on any computer (Windows, Mac, Linux, etc.).
+You write the code once, and it will work everywhere.
+This is because Java uses something called the Java Virtual Machine (JVM), which helps it run on any system.
+
+=================================================================================================================================

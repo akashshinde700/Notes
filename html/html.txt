@@ -1,0 +1,68 @@
+                                              HTML
+
+HTML stands for HyperText Markup Language.
+It is the basic language used to create websites.
+HTML gives structure and meaning to web content.
+
+🌐What does HyperText mean?
+HyperText means clickable links.
+These links help you move from one page to another on the internet.
+
+For example, 
+when you click on a word or picture and it takes you to a new page — that's HyperText!
+
+🧱 What is Markup?
+Markup means adding labels to parts of a web page.
+It tells the browser what each part is, like a heading, paragraph, or image.
+
+HTML uses tags (like <p> or <h1>) to do this.
+These tags help the web browser know how to show the content.
+
+🏷️ What are HTML Tags?
+Tags look like this: <tagname>.
+Example: <p> for a paragraph.
+Most tags come in pairs:
+Opening tag: <p>
+Closing tag: </p>
+
+Tags are not case-sensitive, but it’s best to write them in lowercase.
+
+🧩 Common HTML Elements
+<head> – Info about the page
+<title> – Page title (seen on browser tab)
+<body> – Main content
+<p> – Paragraph
+<div> – Container for content
+<img> – Image
+<a> – Link
+<ul>, <ol>, <li> – Lists (unordered, ordered, list items)
+<video>, <audio> – Media
+
+💬 HTML Comments
+Used to add notes in the code.
+Not shown on the webpage.
+Example: <!-- This is a comment -->
+
+✍️ Attributes in HTML
+Attributes give extra information about an element.
+Written inside the opening tag.
+Example: <img src="image.jpg" alt="My Image">
+src = image source
+alt = alternative text
+
+🌍 HTML + CSS + JavaScript
+HTML = Structure
+CSS = Appearance (colors, layout)
+JavaScript = Behavior (what the page does)
+
+📄 Forms and Media
+Forms help with actions like login, register, or send info.
+HTML supports media like audio and video using tags like <audio> and <video>.
+
+Block vs Inline Elements
+Block-level: Takes full width (e.g., <div>, <p>)
+Inline-level: Only takes up as much space as needed (e.g., <span>, <a>)
+
+Extra Tips
+Use <link rel="preload"> to load important files early.
+Use responsive images for better performance on different devices.

@@ -1,0 +1,118 @@
+                                         Data
+
+data is meanigful information
+
+data is information that has been translated into a form that is efficient for movement or processing
+
+                                         Types of data 
+
+Unstructured data
+data that is usually not as easily searchable 
+can not be easily converted into information
+example
+handwritten application,emails,essays,terms and conditions ,text file etc
+
+structured data
+data in predefined types and patterns
+can be easily converted into information
+example
+forms-government,school, etc
+bank passbook,excel file etc
+
+
+Predefined Types in Structured Data
+These are specific, allowed data formats or categories:
+
+Type	Description	Example
+Integer	Whole numbers	42, -10
+Float/Decimal	Numbers with decimal points	3.14, 0.99
+String	Text data	"John", "NYC"
+Boolean	True/false values	TRUE, FALSE
+Date/Time	Temporal data	2025-07-13, 14:00:00
+
+🔹 Predefined Patterns in Structured Data
+Patterns define how data should be structured or organized. Examples include:
+
+1. Tabular Format (Relational Databases)
+Data stored in rows and columns
+
+Each column has a data type
+
+Tables can be linked via keys
+
+ID	Name	Age	Email
+1	Alice	30	alice@email.com
+
+
+2. Regular Expressions (for data validation)
+Patterns used to ensure correct formatting:
+
+Email: ^\S+@\S+\.\S+$
+
+Phone number: \(\d{3}\) \d{3}-\d{4}
+
+ZIP code: \d{5}
+
+3. Schemas (e.g., in XML, JSON, SQL)
+Define rules for data structure:
+
+Field names
+
+Data types
+
+Optional vs required fields
+
+Example (JSON Schema):
+
+json
+Copy
+Edit
+{
+  "type": "object",
+  "properties": {
+    "username": { "type": "string" },
+    "age": { "type": "integer" }
+  },
+  "required": ["username", "age"]
+}
+🔹 Summary
+Feature	Structured Data
+Storage Format	Tables, fields, rows, columns
+Data Types	Predefined (int, string, date, etc.)
+Patterns	Schemas, regular expressions, table design
+Tools	SQL, Excel, CSV, JSON with schema
+Pros	Fast querying, easy validation and sorting
+Cons	Less flexible for unstructured content
+
+Term	Meaning	Grammar
+Datum	A single piece of information	Singular noun
+Data	Multiple pieces of information	Originally plural, now often singular/mass noun
+
+Origin and History
+Both words come from Latin:
+
+Datum means "something given" (past participle of dare, "to give").
+
+Data is the plural form of datum.
+
+
+The word "datum" has been in use since the 1600s.
+
+The plural "data" entered English in the 17th century as well.
+
+In scientific and technical writing, many purists still prefer the original Latin usage (plural for data).
+
+But in everyday use, "data" is often singular and treated as uncountable.
+
+Fast searches and maintenance.
+Interesting fact: IBM created its first database for
+NASA's moon mission 1968 - Information Control System and Data Language/Interface (ICS/DL/I). ICS is renamed to Information Management System/360 (IMS/360) and became available to the IT world in 1969.
+
+Available DBMS
+MySQL
+Oracle
+MSSQL
+PostgreSQL
+MongoDB
+MariaDB
+Google BigQuery-

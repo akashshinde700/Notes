@@ -1,0 +1,34 @@
+
+
+🔹 
+
+
+forEach()	Run a function on every item
+map()	Create new array by changing each item
+filter()	Create new array with items that pass a test
+reduce()	Reduce array to a single value
+reduceRight()	Like reduce, but from right to left
+flat()	Flatten nested arrays (1 level or more)
+flatMap()	Map and then flatten in one step
+
+🔹 Sorting / Rearranging
+
+sort()	Sort the array
+reverse()	Reverse the array
+join()	Join all items into a string
+toString()	Convert array to string
+
+🔹 Combining / Copying
+
+concat()	Combine two or more arrays
+from()	Create array from object or string
+of()	Create array from values
+Array.isArray()	Check if a value is an array
+
+🔹 Other Useful Methods
+
+entries()	Returns iterator with [index, value] pairs
+keys()	Returns iterator of keys (indexes)
+values()	Returns iterator of values
+at()	Gets value at index (supports negative index)
+toLocaleString()	Converts array to localized string
