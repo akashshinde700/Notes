@@ -1,0 +1,89 @@
+# Scope in JavaScript
+
+**Scope** defines where a variable can be accessed or used in your code.
+
+---
+
+## 1. Global Scope
+Variables declared outside any function or block are in the **global scope** and can be accessed anywhere in the code.
+
+```javascript
+let name = "Akash"; // Global scope
+
+function sayHi() {
+  console.log(name); // Accessible here
+}
+
+sayHi(); // Output: Akash
+console.log(name); // Output: Akash
+```
+
+---
+
+## 2. Local Scope
+Variables declared inside a function are in the **local scope** and can only be accessed within that function.
+
+```javascript
+function sayHello() {
+  let message = "Hello World"; // Local scope
+  console.log(message); // Output: Hello World
+}
+
+sayHello();
+// console.log(message); // ❌ ReferenceError: message is not defined
+```
+
+---
+
+## 3. Block Scope (ES6)
+Variables declared with `let` or `const` inside curly braces `{}` are only accessible within that block.  
+**Note**: `var` does not respect block scope and is hoisted to the function or global scope.
+
+```javascript
+{
+  let a = 10;
+  const b = 20;
+  console.log(a, b); // Output: 10, 20
+}
+
+// console.log(a, b); // ❌ ReferenceError: a is not defined, b is not defined
+```
+
+---
+
+## 4. Function Scope
+Variables declared with `var`, `let`, or `const` inside a function are only accessible within that function.
+
+```javascript
+function test() {
+  var x = 1;
+  let y = 2;
+  const z = 3;
+  console.log(x, y, z); // Output: 1, 2, 3
+}
+
+// console.log(x, y, z); // ❌ ReferenceError: x, y, z are not defined
+```
+
+---
+
+## 5. Lexical Scope (Static Scope)
+JavaScript uses **lexical scoping**, meaning the scope of a variable is determined by its position in the source code (not where it’s executed).  
+A function can access variables from its parent (outer) scope, but the parent cannot access variables from the child scope.
+
+```javascript
+function outer() {
+  let outerVar = "I'm outside!";
+  
+  function inner() {
+    console.log(outerVar); // Output: I'm outside!
+  }
+  
+  inner();
+}
+
+outer();
+```
+
+- **Declared with**: Nested functions.
+- **Accessible where**: Inner functions can access outer scope variables.

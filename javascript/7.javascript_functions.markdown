@@ -1,0 +1,224 @@
+# Functions in JavaScript
+
+A **function** is a reusable block of code that performs a specific task. You define it once and can call it multiple times.
+
+```javascript
+function sayHello() {
+  console.log("Hello, world!");
+}
+sayHello(); // Output: Hello, world!
+```
+
+---
+
+## Key Concepts
+
+### 1. Function Declaration
+Creating a function with a name.
+
+```javascript
+function greet() {
+  console.log("Hello!");
+}
+```
+
+### 2. Function Reference
+Mentioning the function’s name without executing it.
+
+```javascript
+greet; // Refers to the function, does not run it
+```
+
+### 3. Function Calling
+Executing the function.
+
+```javascript
+greet(); // Output: Hello!
+```
+
+### 4. Parameters
+Placeholders in the function definition for expected values.
+
+```javascript
+function greetUser(name) {
+  console.log("Hello, " + name);
+}
+```
+
+### 5. Arguments
+Actual values passed when calling the function.
+
+```javascript
+greetUser("Akash"); // Output: Hello, Akash
+```
+
+**Summary**:
+- **Function Declaration**: Creating a function.
+- **Function Reference**: Mentioning the function name.
+- **Function Calling**: Running the function.
+- **Parameter**: Placeholder in the function definition.
+- **Argument**: Real value provided during the function call.
+
+---
+
+### return
+The `return` statement sends a value back to the caller.
+
+- **Used for**:
+  - Getting results.
+  - Saving results in a variable.
+  - Performing further operations with the value.
+
+```javascript
+function add(a, b) {
+  return a + b;
+}
+let result = add(3, 5);
+console.log(result); // Output: 8
+```
+
+---
+
+### console.log
+Prints output to the console (browser or terminal).
+
+- **Used for**:
+  - Checking values.
+  - Debugging code.
+  - Displaying messages to developers.
+
+---
+
+## Types of Functions
+
+### 1. Named Function (Function Declaration)
+A regular function with a name.
+
+```javascript
+function greet() {
+  console.log("Hello!");
+}
+greet(); // Output: Hello!
+```
+
+- **Use**: When you need to reuse a function by name.
+
+---
+
+### 2. Anonymous Function
+A function without a name, often stored in a variable.
+
+```javascript
+let sayHi = function() {
+  console.log("Hi there!");
+};
+sayHi(); // Output: Hi there!
+```
+
+- **Use**: When a function is used only once or doesn’t need a name.
+
+---
+
+### 3. Arrow Function (ES6)
+A concise syntax for functions using `=>`.
+
+```javascript
+let add = (a, b) => a + b;
+console.log(add(3, 4)); // Output: 7
+```
+
+- **Use**: For short, simple functions.
+
+---
+
+### 4. Function Expression
+A function stored in a variable (not hoisted).
+
+```javascript
+let multiply = function(x, y) {
+  return x * y;
+};
+console.log(multiply(2, 5)); // Output: 10
+```
+
+- **Use**: When you need to assign a function to a variable.
+
+---
+
+### 5. Immediately Invoked Function Expression (IIFE)
+A function that runs immediately after definition.
+
+```javascript
+(function() {
+  console.log("I ran immediately!");
+})(); // Output: I ran immediately!
+```
+
+- **Use**: For one-time execution or to create a private scope.
+
+---
+
+### 6. Constructor Function
+Used to create objects with the `new` keyword.
+
+```javascript
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+}
+let p1 = new Person("Akash", 25);
+console.log(p1.name); // Output: Akash
+```
+
+- **Use**: For creating multiple similar objects.
+
+---
+
+### 7. Generator Function
+A function that can pause and resume using `yield`.
+
+```javascript
+function* countUp() {
+  yield 1;
+  yield 2;
+  yield 3;
+}
+let counter = countUp();
+console.log(counter.next().value); // Output: 1
+```
+
+- **Use**: For controlled sequences or pausing loops.
+
+---
+
+### 8. Callback Function
+A function passed as an argument to another function.
+
+```javascript
+function greet(name, callback) {
+  console.log("Hello, " + name);
+  callback();
+}
+greet("Akash", function() {
+  console.log("This is a callback!");
+});
+// Output:
+// Hello, Akash
+// This is a callback!
+```
+
+- **Use**: Common in asynchronous operations like data fetching or event handling.
+
+---
+
+## Function Types Summary
+| Type                 | Description                               |
+|----------------------|-------------------------------------------|
+| Named Function       | Regular function with a name              |
+| Anonymous Function   | Function without a name                   |
+| Arrow Function       | Short syntax using `=>`                   |
+| Function Expression  | Function stored in a variable             |
+| IIFE                 | Runs immediately after creation           |
+| Constructor Function | Creates objects using `new`               |
+| Generator Function   | Can pause with `yield`                    |
+| Callback Function    | Passed as an argument to another function |

@@ -1,0 +1,173 @@
+# JavaScript Array Methods (Searching/Checking)
+
+These array methods are used to search for values or check conditions within an array.
+
+---
+
+## 1. includes()
+Checks if an array contains a specific value. Returns `true` or `false`.
+
+**Syntax**:
+```javascript
+array.includes(value)
+```
+
+**Example**:
+```javascript
+let fruits = ['apple', 'banana', 'orange'];
+console.log(fruits.includes('banana')); // true
+console.log(fruits.includes('grape')); // false
+```
+
+**Explanation**:
+- Returns `true` if `'banana'` is in the array.
+- Returns `false` if `'grape'` is not found.
+
+---
+
+## 2. indexOf()
+Returns the **first** index of a value in the array. Returns `-1` if not found.
+
+**Syntax**:
+```javascript
+array.indexOf(value)
+```
+
+**Example**:
+```javascript
+let colors = ['red', 'blue', 'green', 'blue'];
+console.log(colors.indexOf('blue')); // 1
+console.log(colors.indexOf('yellow')); // -1
+```
+
+**Explanation**:
+- Array: `['red', 'blue', 'green', 'blue']`
+- `'blue'` is at indices `1` and `3`.
+- Returns `1` (first occurrence).
+- Returns `-1` for `'yellow'` (not found).
+
+---
+
+## 3. lastIndexOf()
+Returns the **last** index of a value in the array. Returns `-1` if not found.
+
+**Syntax**:
+```javascript
+array.lastIndexOf(value)
+```
+
+**Example**:
+```javascript
+let colors = ['red', 'blue', 'green', 'blue'];
+console.log(colors.lastIndexOf('blue')); // 3
+console.log(colors.lastIndexOf('yellow')); // -1
+```
+
+**Explanation**:
+- Array: `['red', 'blue', 'green', 'blue']`
+- `'blue'` is at indices `1` and `3`.
+- Returns `3` (last occurrence).
+- Returns `-1` for `'yellow'` (not found).
+
+---
+
+## 4. find()
+Returns the **first** element that satisfies a provided condition. Returns `undefined` if no element is found.
+
+**Syntax**:
+```javascript
+array.find(callback)
+```
+
+**Example**:
+```javascript
+let nums = [3, 8, 12, 5];
+let found = nums.find(num => num > 10);
+console.log(found); // 12
+```
+
+**Explanation**:
+- Finds the first number `> 10` (`12`).
+- Returns the element itself, not the index.
+
+---
+
+## 5. findIndex()
+Returns the **index** of the first element that satisfies a condition. Returns `-1` if no element is found.
+
+**Syntax**:
+```javascript
+array.findIndex(callback)
+```
+
+**Example**:
+```javascript
+let numbers = [5, 12, 8, 130, 44];
+let index = numbers.findIndex(num => num > 10);
+console.log(index); // 1
+```
+
+**Explanation**:
+- Array: `[5, 12, 8, 130, 44]`
+- Condition: `num > 10`
+- `12` at index `1` is the first match.
+- Returns `1`.
+
+**Example (No Match)**:
+```javascript
+let index = numbers.findIndex(num => num > 200);
+console.log(index); // -1
+```
+
+---
+
+## 6. some()
+Checks if **at least one** element satisfies a condition. Returns `true` or `false`.
+
+**Syntax**:
+```javascript
+array.some(callback)
+```
+
+**Example**:
+```javascript
+let numbers = [3, 7, 10, 15];
+let result = numbers.some(num => num > 10);
+console.log(result); // true
+```
+
+**Explanation**:
+- Array: `[3, 7, 10, 15]`
+- Condition: `num > 10`
+- `15` satisfies the condition, so returns `true`.
+
+---
+
+## 7. every()
+Checks if **all** elements satisfy a condition. Returns `true` or `false`.
+
+**Syntax**:
+```javascript
+array.every(callback)
+```
+
+**Example**:
+```javascript
+let numbers = [10, 20, 30];
+let result = numbers.every(num => num > 5);
+console.log(result); // true
+```
+
+**Explanation**:
+- Array: `[10, 20, 30]`
+- Condition: `num > 5`
+- All elements (`10`, `20`, `30`) satisfy the condition, so returns `true`.
+
+**Example (Not All Pass)**:
+```javascript
+let result = numbers.every(num => num > 15);
+console.log(result); // false
+```
+
+**Explanation**:
+- `10` is not `> 15`, so returns `false`.

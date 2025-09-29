@@ -1,0 +1,195 @@
+# JavaScript Array Methods (Adding/Removing Items)
+
+Array methods are built-in functions that allow manipulation of arrays. The following methods focus on adding or removing elements.
+
+---
+
+## 1. push()
+Adds one or more elements to the **end** of an array and returns the new length.
+
+**Syntax**:
+```javascript
+array.push(element1, element2, ...)
+```
+
+**Example**:
+```javascript
+let fruits = ['apple', 'banana'];
+fruits.push('orange');
+console.log(fruits); // ['apple', 'banana', 'orange']
+```
+
+**Explanation**:
+- Adds `'orange'` to the end.
+- Modifies the original array.
+- Returns the new length (3, not shown here).
+
+---
+
+## 2. pop()
+Removes the **last** element from an array and returns the removed element.
+
+**Syntax**:
+```javascript
+array.pop()
+```
+
+**Example**:
+```javascript
+let fruits = ['apple', 'banana', 'orange'];
+fruits.pop();
+console.log(fruits); // ['apple', 'banana']
+```
+
+**Explanation**:
+- Removes `'orange'` (last element).
+- Modifies the original array.
+- Returns the removed element (`'orange'`, not shown here).
+
+---
+
+## 3. unshift()
+Adds one or more elements to the **beginning** of an array and returns the new length.
+
+**Syntax**:
+```javascript
+array.unshift(element1, element2, ...)
+```
+
+**Example**:
+```javascript
+let fruits = ['banana', 'orange'];
+fruits.unshift('apple');
+console.log(fruits); // ['apple', 'banana', 'orange']
+```
+
+**Explanation**:
+- Adds `'apple'` to the beginning.
+- Shifts existing elements to the right.
+- Modifies the original array.
+- Returns the new length (3, not shown here).
+
+---
+
+## 4. shift()
+Removes the **first** element from an array and returns the removed element.
+
+**Syntax**:
+```javascript
+array.shift()
+```
+
+**Example**:
+```javascript
+let fruits = ['apple', 'banana', 'orange'];
+fruits.shift();
+console.log(fruits); // ['banana', 'orange']
+```
+
+**Explanation**:
+- Removes `'apple'` (first element).
+- Modifies the original array.
+- Returns the removed element (`'apple'`, not shown here).
+
+---
+
+## 5. splice(start, deleteCount, item1, item2, ...)
+Adds or removes elements at a specific position in the array.
+
+**Syntax**:
+```javascript
+array.splice(startIndex, numberToRemove, itemToAdd1, itemToAdd2, ...)
+```
+
+**Example (Remove)**:
+```javascript
+let fruits = ['apple', 'banana', 'orange'];
+fruits.splice(1, 1);
+console.log(fruits); // ['apple', 'orange']
+```
+
+**Explanation**:
+- Starts at index `1` (`'banana'`).
+- Removes `1` item (`'banana'`).
+- Modifies the original array.
+
+**Example (Add)**:
+```javascript
+fruits.splice(1, 0, 'grape');
+console.log(fruits); // ['apple', 'grape', 'orange']
+```
+
+**Explanation**:
+- Starts at index `1`.
+- Removes `0` items (no removal).
+- Adds `'grape'` at index `1`.
+- Modifies the original array.
+
+---
+
+## 6. slice(start, end)
+Returns a new array with a portion of the original array, without modifying it.
+
+**Syntax**:
+```javascript
+array.slice(start, end)
+```
+
+**Example**:
+```javascript
+let fruits = ['apple', 'banana', 'orange', 'grape'];
+let sliced = fruits.slice(1, 3);
+console.log(sliced); // ['banana', 'orange']
+console.log(fruits); // ['apple', 'banana', 'orange', 'grape']
+```
+
+**Explanation**:
+- Starts at index `1` (`'banana'`).
+- Ends before index `3` (excludes `'grape'`).
+- Returns a new array `['banana', 'orange']`.
+- Original array remains unchanged.
+
+---
+
+## 7. fill(value, start, end)
+Fills part or all of an array with a specified value.
+
+**Syntax**:
+```javascript
+array.fill(value, start, end)
+```
+
+**Example**:
+```javascript
+let numbers = [1, 2, 3, 4];
+numbers.fill(0, 1, 3);
+console.log(numbers); // [1, 0, 0, 4]
+```
+
+**Explanation**:
+- Fills with value `0` from index `1` to before index `3`.
+- Modifies the original array.
+- Result: `[1, 0, 0, 4]`.
+
+---
+
+## 8. copyWithin(target, start, end)
+Copies part of the array to another position in the same array, overwriting existing values.
+
+**Syntax**:
+```javascript
+array.copyWithin(target, start, end)
+```
+
+**Example**:
+```javascript
+let numbers = [1, 2, 3, 4, 5];
+numbers.copyWithin(1, 3);
+console.log(numbers); // [1, 4, 5, 4, 5]
+```
+
+**Explanation**:
+- Copies elements from index `3` to the end (`[4, 5]`).
+- Pastes them starting at index `1`, overwriting existing values.
+- Modifies the original array.
+- Result: `[1, 4, 5, 4, 5]`.

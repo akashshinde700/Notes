@@ -1,0 +1,56 @@
+# Variables in JavaScript
+
+A **variable** is a container for storing data values.
+
+## Keywords to Declare Variables
+JavaScript provides three keywords to declare variables:
+- `var`
+- `let`
+- `const`
+
+## Variable Syntax
+```javascript
+keyword variableName = value;
+```
+
+---
+
+## 1. `var`
+- **Scope**: Function-scoped or globally scoped.
+- **Redeclarable**: Yes, can be redeclared within the same scope.
+- **Reassignable**: Yes, can be reassigned.
+
+```javascript
+var title = "learn javascript";
+var title = "learn javascript again"; // Redeclaring a var variable
+title = "learn javascript once more"; // Reassigning a var variable
+// console.log(title); // Output: learn javascript once more
+```
+
+---
+
+## 2. `let`
+- **Scope**: Block-scoped (limited to the block `{}` it’s defined in).
+- **Redeclarable**: No, cannot be redeclared in the same scope.
+- **Reassignable**: Yes, can be reassigned.
+
+```javascript
+let firstName = "John";
+// let firstName = "Jane"; // Error: Cannot redeclare block-scoped variable
+firstName = "John Doe"; // Reassignment is allowed
+// console.log(firstName); // Output: John Doe
+```
+
+---
+
+## 3. `const`
+- **Scope**: Block-scoped.
+- **Redeclarable**: No, cannot be redeclared.
+- **Reassignable**: No, cannot be reassigned.
+
+```javascript
+const lastName = "Doe";
+// const lastName = "Smith"; // Error: Cannot redeclare block-scoped variable
+// lastName = "Smith"; // Error: Assignment to constant variable
+// console.log(lastName); // Output: Doe
+```

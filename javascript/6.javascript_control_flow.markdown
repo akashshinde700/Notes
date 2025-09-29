@@ -1,0 +1,246 @@
+# JavaScript Control Flow
+
+Control flow determines the order in which code executes. By default, code runs from top to bottom, but you can alter this flow to:
+- Run code only if a condition is true.
+- Repeat code in a loop.
+- Skip certain code.
+- Stop a loop early.
+
+Control flow is managed using **conditional statements** and **loops**.
+
+---
+
+## 1. Conditional Statements
+
+### if, else if, else
+Used to make decisions based on conditions.
+
+```javascript
+let age = 18;
+
+if (age >= 18) {
+  console.log("You are an adult");
+} else {
+  console.log("You are a minor");
+}
+```
+
+- If the condition is `true`, the first block runs.
+- Otherwise, the `else` block runs.
+
+---
+
+### switch
+An alternative to multiple `if...else if` statements, used when there are many choices.
+
+```javascript
+let day = "Monday";
+
+switch (day) {
+  case "Monday":
+    console.log("Start of the week");
+    break;
+  case "Friday":
+    console.log("Weekend is near");
+    break;
+  default:
+    console.log("Another day");
+}
+```
+
+- **break**: Stops execution after a matching case.
+- **default**: Runs if no case matches (like `else`).
+
+---
+
+## 2. Loops (Iteration)
+Loops run code repeatedly based on conditions or iterations.
+
+### for Loop
+Runs a block a specific number of times.
+
+```javascript
+for (let i = 1; i <= 3; i++) {
+  console.log(i); // Output: 1, 2, 3
+}
+```
+
+---
+
+### while Loop
+Runs as long as a condition is `true`.
+
+```javascript
+let i = 1;
+while (i <= 3) {
+  console.log(i); // Output: 1, 2, 3
+  i++;
+}
+```
+
+---
+
+### do...while Loop
+Runs at least once, then checks the condition.
+
+```javascript
+let i = 1;
+do {
+  console.log(i); // Output: 1, 2, 3
+  i++;
+} while (i <= 3);
+```
+
+---
+
+### for...of Loop
+Loops through values of iterable objects like arrays, strings, Sets, or Maps.
+
+#### 1. Loop through an Array
+```javascript
+let fruits = ["apple", "banana", "cherry"];
+for (let fruit of fruits) {
+  console.log(fruit); // Output: apple, banana, cherry
+}
+```
+
+#### 2. Loop through a String
+```javascript
+let word = "Hi";
+for (let char of word) {
+  console.log(char); // Output: H, i
+}
+```
+
+#### 3. Loop through a Set
+```javascript
+let ids = new Set([101, 102, 103]);
+for (let id of ids) {
+  console.log(id); // Output: 101, 102, 103
+}
+```
+
+#### 4. Loop through a Map
+A `Map` stores key-value pairs, where keys can be any type and insertion order is maintained.
+
+```javascript
+let myMap = new Map();
+myMap.set("name", "Alice");
+myMap.set("age", 25);
+myMap.set("city", "Pune");
+
+// Loop through entries (default)
+for (let [key, value] of myMap) {
+  console.log(key, ":", value);
+}
+// Output:
+// name : Alice
+// age : 25
+// city : Pune
+
+// Loop through keys
+for (let key of myMap.keys()) {
+  console.log(key);
+}
+// Output:
+// name
+// age
+// city
+
+// Loop through values
+for (let value of myMap.values()) {
+  console.log(value);
+}
+// Output:
+// Alice
+// 25
+// Pune
+```
+
+---
+
+### for...in Loop
+Loops over the enumerable properties (keys) of an object.
+
+```javascript
+let person = {
+  name: "Alice",
+  age: 25,
+  city: "Pune"
+};
+
+for (let key in person) {
+  console.log(key + ": " + person[key]);
+}
+// Output:
+// name: Alice
+// age: 25
+// city: Pune
+```
+
+---
+
+## break and continue
+Used inside loops to control execution.
+
+### break
+Stops the loop entirely.
+
+```javascript
+for (let i = 1; i <= 5; i++) {
+  if (i === 3) {
+    break; // Stops loop at i = 3
+  }
+  console.log(i); // Output: 1, 2
+}
+```
+
+### continue
+Skips the current iteration and moves to the next.
+
+```javascript
+for (let i = 1; i <= 5; i++) {
+  if (i === 3) {
+    continue; // Skips i = 3
+  }
+  console.log(i); // Output: 1, 2, 4, 5
+}
+```
+
+---
+
+## Ternary Operator
+A shorthand for `if...else` in a single line.
+
+**Syntax**: `condition ? value_if_true : value_if_false`
+
+```javascript
+let age = 18;
+let result = age >= 18 ? "Adult" : "Minor";
+console.log(result); // Output: Adult
+```
+
+---
+
+## try...catch...finally
+Handles errors during code execution.
+
+- **try**: Runs the main code.
+- **catch**: Handles errors if they occur.
+- **finally**: Always runs, whether an error occurred or not (optional).
+
+```javascript
+try {
+  console.log("Trying code...");
+  let result = 5 / 0; // Valid in JS, returns Infinity
+  console.log(result);
+} catch (error) {
+  console.log("Error happened:", error.message);
+} finally {
+  console.log("This will always run");
+}
+// Output:
+// Trying code...
+// Infinity
+// This will always run
+```

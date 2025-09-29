@@ -1,0 +1,139 @@
+# Hoisting in JavaScript
+
+**Hoisting** is JavaScript's behavior of moving `var` variable declarations and function declarations to the top of their scope (file or function) during execution. Only declarations are hoisted, not their assigned values.
+
+---
+
+## Variable Hoisting with `var`
+
+`var` declarations are hoisted to the top of their scope, but their values are not initialized until the assignment.
+
+```javascript
+console.log(a); // Output: undefined
+var a = 10;
+```
+
+**Behind the scenes**:
+```javascript
+var a; // Declaration hoisted
+console.log(a); // undefined
+a = 10; // Assignment stays in place
+```
+
+---
+
+## Temporal Dead Zone (TDZ)
+
+The **Temporal Dead Zone (TDZ)** is the period between entering a scope and the line where `let` or `const` is declared. During this time, the variable is hoisted but cannot be accessed.
+
+```javascript
+{
+  console.log(x); // ❌ ReferenceError: Cannot access 'x' before initialization
+  let x = 10; // Declaration
+}
+```
+
+**Example with multiple variables**:
+```javascript
+{
+  console.log(x); // ❌ ReferenceError (TDZ)
+  console.log(akash); // ❌ ReferenceError (TDZ)
+  console.log(shinde); // ❌ ReferenceError (TDZ)
+  let x = 10;
+  let akash = "hello";
+  const shinde = "world";
+}
+```
+
+---
+
+## Class Hoisting
+
+Class declarations are **not hoisted** like functions and exist in the TDZ until their declaration.
+
+```javascript
+const obj = new Person(); // ❌ ReferenceError: Cannot access 'Person' before initialization
+class Person {}
+```
+
+---
+
+## Function Hoisting
+
+**Function declarations** are fully hoisted, including their body, so they can be called before their declaration.
+
+```javascript
+greet(); // Output: Hello!
+
+function greet() {
+  console.log("Hello!");
+}
+```
+
+**Behind the scenes**:
+```javascript
+function greet() {
+  console.log("Hello!");
+}
+greet();
+```
+
+---
+
+## Hoisting in Function Scope
+
+Variables declared inside a function are hoisted to the top of the function scope, not globally.
+
+```javascript
+function test() {
+  console.log(a); // Output: undefined
+  var a = 10;
+}
+test();
+```
+
+**Behind the scenes**:
+```javascript
+function test() {
+  var a; // Hoisted
+  console.log(a); // undefined
+  a = 10;
+}
+```
+
+---
+
+## Function Expressions
+
+**Function expressions** are not hoisted like declarations. Only the variable declaration (with `var`) is hoisted, and it’s set to `undefined`.
+
+```javascript
+sayHi(); // ❌ TypeError: sayHi is not a function
+
+var sayHi = function() {
+  console.log("Hi!");
+};
+```
+
+**Behind the scenes**:
+```javascript
+var sayHi; // Hoisted as undefined
+sayHi(); // TypeError: sayHi is not a function
+sayHi = function() {
+  console.log("Hi!");
+};
+```
+
+---
+
+## Arrow Functions
+
+**Arrow functions** behave like `const` variables—they are hoisted but remain in the TDZ until initialized.
+
+```javascript
+greet(); // ❌ ReferenceError: Cannot access 'greet' before initialization
+
+const greet = () => {
+  console.log("Hi");
+};
+```

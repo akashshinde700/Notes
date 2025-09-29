@@ -1,0 +1,175 @@
+# Operators in JavaScript
+
+Operators are special symbols used to perform operations on values and variables. They are the building blocks of expressions and logic in code.
+
+---
+
+## Arithmetic Operators
+Arithmetic operators perform basic mathematical operations on numbers.
+
+```javascript
+let a = 20;
+let b = 10;
+
+console.log(a + b); // 30 (Addition: 20 + 10)
+console.log(a - b); // 10 (Subtraction: 20 - 10)
+console.log(a * b); // 200 (Multiplication: 20 × 10)
+console.log(a / b); // 2 (Division: 20 ÷ 10)
+console.log(a % b); // 0 (Modulus: remainder of 20 ÷ 10)
+console.log(a ** b); // 10240000000000 (Exponentiation: 20^10)
+
+a++; // a = a + 1; Output: 21
+b++; // b = b + 1; Output: 11
+console.log(a); // 21
+console.log(b); // 11
+
+a--; // a = a - 1; Output: 20
+b--; // b = b - 1; Output: 10
+console.log(a, b); // 20, 10
+
+let c = 20;
+console.log(++c); // 21 (Increment before use)
+console.log(c++); // 21 (Use, then increment)
+console.log(c); // 22
+console.log(c--); // 22 (Use, then decrement)
+console.log(--c); // 20 (Decrement before use)
+console.log(c); // 20
+```
+
+---
+
+## Assignment Operators
+Assignment operators assign values to variables, often combining assignment with arithmetic or logical operations.
+
+```javascript
+let a = 45;
+
+a += 5; // a = a + 5; Output: 50
+console.log("After += 5:", a);
+
+a -= 10; // a = a - 10; Output: 40
+console.log("After -= 10:", a);
+
+a *= 2; // a = a * 2; Output: 80
+console.log("After *= 2:", a);
+
+a /= 4; // a = a / 4; Output: 20
+console.log("After /= 4:", a);
+
+a **= 2; // a = a ** 2; Output: 400
+console.log("After **= 2:", a);
+
+a %= 250; // a = a % 250; Output: 150 (400 % 250)
+console.log("After %= 250:", a);
+```
+
+---
+
+## Comparison Operators
+Comparison operators compare two values and return a Boolean (`true` or `false`).
+
+```javascript
+console.log(5 == "5"); // true (Loose equality: compares values)
+console.log(5 === "5"); // false (Strict equality: compares value and type)
+console.log(5 != "5"); // false (Loose inequality: values are equal)
+console.log(5 !== "5"); // true (Strict inequality: types differ)
+console.log(7 > 3); // true (Greater than)
+console.log(3 < 7); // true (Less than)
+console.log(5 >= 5); // true (Greater than or equal to)
+console.log(4 <= 3); // false (Less than or equal to)
+```
+
+---
+
+## Logical Operators
+Logical operators are used to combine or manipulate Boolean values.
+
+```javascript
+let a = true;
+let b = false;
+
+console.log(a && b); // false (Logical AND: true if both are true)
+console.log(a || b); // true (Logical OR: true if at least one is true)
+console.log(!a); // false (Logical NOT: reverses truthiness)
+```
+
+---
+
+## Type Operators
+Type operators are used to inspect the type or class of a variable.
+
+```javascript
+let x = 42;
+console.log(typeof x); // "number" (Returns the type of a variable)
+
+let date = new Date();
+console.log(date instanceof Date); // true (Checks if an object is an instance of a class)
+```
+
+---
+
+## String Operators
+String operators are used to manipulate strings.
+
+```javascript
+let first = "Hello";
+let last = "World";
+console.log(first + " " + last); // "Hello World" (Concatenation)
+
+let greet = "Hi";
+greet += ", John!";
+console.log(greet); // "Hi, John!" (Append)
+```
+
+---
+
+## Other Useful Operators
+
+### Ternary Operator (`? :`)
+A shorthand for `if-else` statements.
+
+```javascript
+let age = 18;
+let result = age >= 18 ? "Adult" : "Minor";
+console.log(result); // "Adult"
+```
+
+### Comma Operator (`,`)
+Evaluates multiple expressions and returns the last one.
+
+```javascript
+let x = (1 + 2, 3 + 4);
+console.log(x); // 7
+```
+
+### `delete` Operator
+Removes a property from an object.
+
+```javascript
+let user = { name: "John", age: 25 };
+delete user.age;
+console.log(user); // { name: "John" }
+```
+
+### `in` Operator
+Checks if a property exists in an object.
+
+```javascript
+let user = { name: "Alice" };
+console.log("name" in user); // true
+```
+
+### Spread/Rest Operator (`...`)
+- **Spread**: Expands elements in arrays or objects.
+- **Rest**: Collects remaining elements.
+
+```javascript
+let arr = [1, 2, 3];
+let newArr = [...arr, 4];
+console.log(newArr); // [1, 2, 3, 4]
+
+function sum(...nums) {
+  return nums.reduce((a, b) => a + b, 0);
+}
+console.log(sum(1, 2, 3)); // 6
+```

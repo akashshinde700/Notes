@@ -1,0 +1,190 @@
+# Data Types in JavaScript
+
+Data types define the kind of value a variable can hold.
+
+---
+
+## i) Primitive Data Types
+Primitive data types represent single values and are **immutable** (their values cannot be changed once created).
+
+### 1. String
+Represents textual data.
+
+```javascript
+let greeting = "Hello, World!"; // Double quotes for simple one-line string
+let greeting2 = 'Hello, "Akash"'; // Single quotes can contain double quotes
+let greeting3 = `hello,
+Akash what's up`; // Backticks (template literals) allow multi-line strings
+console.log(typeof greeting); // Output: "string"
+```
+
+### 2. Number
+Represents integer or floating-point numbers.
+
+```javascript
+let age = 30;
+console.log(typeof age); // Output: "number"
+```
+
+### 3. Boolean
+Represents logical values: `true` or `false`.
+
+```javascript
+let isActive = true;
+console.log(typeof isActive); // Output: "boolean"
+```
+
+### 4. Undefined
+Represents a variable that has been declared but not assigned a value.
+
+```javascript
+let notAssigned;
+console.log(typeof notAssigned); // Output: "undefined"
+```
+
+### 5. Null
+Represents an explicit absence of a value.
+
+```javascript
+let emptyValue = null;
+console.log(typeof emptyValue); // Output: "object" (historical quirk in JavaScript)
+```
+
+### 6. Symbol (ES6)
+Represents a unique and immutable identifier.
+
+```javascript
+let uniqueId = Symbol("id");
+console.log(typeof uniqueId); // Output: "symbol"
+```
+
+### 7. BigInt (ES11)
+Represents large integers beyond the safe range of the Number type.
+
+```javascript
+let bigNumber = BigInt(1234567890123456789012345678901234567890);
+console.log(typeof bigNumber); // Output: "bigint"
+```
+
+---
+
+## ii) Non-Primitive (Reference) Types
+Non-primitive types are used to store collections of values and are **mutable** (their contents can be changed).
+
+### 1. Object
+A collection of key-value pairs. Objects can contain properties and methods.
+
+```javascript
+let person = {
+  name: "John",
+  age: 30,
+  isActive: true,
+};
+console.log(typeof person); // Output: "object"
+```
+
+### 2. Array
+A special type of object for storing ordered collections of values.
+
+```javascript
+let numbers = [1, 2, 3, 4, 5];
+console.log(typeof numbers); // Output: "object"
+```
+
+### 3. Function
+A reusable block of code.
+
+```javascript
+function greet() {
+  console.log("Hello!");
+}
+console.log(typeof greet); // Output: "function"
+```
+
+### 4. Date
+A built-in object for representing dates and times.
+
+```javascript
+let currentDate = new Date();
+console.log(typeof currentDate); // Output: "object"
+```
+
+### 5. RegExp
+A built-in object for working with regular expressions (patterns for matching strings).
+
+```javascript
+let regex = /ab+c/;
+console.log(typeof regex); // Output: "object"
+```
+
+### 6. Map (ES6)
+A collection of key-value pairs where keys can be of any type.
+
+```javascript
+let map = new Map();
+console.log(typeof map); // Output: "object"
+```
+
+### 7. Set (ES6)
+A collection of unique values, preventing duplicates.
+
+```javascript
+let set = new Set();
+console.log(typeof set); // Output: "object"
+```
+
+### 8. WeakMap (ES6)
+A collection of key-value pairs where keys are objects, and keys can be garbage collected.
+
+```javascript
+let weakMap = new WeakMap();
+console.log(typeof weakMap); // Output: "object"
+```
+
+### 9. WeakSet (ES6)
+A collection of unique objects that allows garbage collection of its elements.
+
+```javascript
+let weakSet = new WeakSet();
+console.log(typeof weakSet); // Output: "object"
+```
+
+### 10. ArrayBuffer (ES6)
+A low-level object representing a fixed-length binary data buffer.
+
+```javascript
+let buffer = new ArrayBuffer(16);
+console.log(typeof buffer); // Output: "object"
+```
+
+### 11. Typed Arrays (ES6)
+Array-like objects for handling binary data, backed by an ArrayBuffer.
+
+```javascript
+let intArray = new Int32Array(buffer);
+console.log(typeof intArray); // Output: "object"
+```
+
+### 12. Promise (ES6)
+An object representing the eventual completion or failure of an asynchronous operation.
+
+```javascript
+let promise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("Operation completed successfully!");
+  }, 1000);
+});
+console.log(typeof promise); // Output: "object"
+```
+
+---
+
+## Mutable vs Immutable
+
+### Mutable
+- **Definition**: Objects that can be changed after creation (e.g., updating, adding, or deleting properties).
+- **Examples**: Objects, arrays, and other non-primitive types in JavaScript are mutable.
+
+### Immutable
+- **Definition**: Objects that cannot be changed after creation. Any modification creates a new value.
+- **Examples**: Primitive types (strings, numbers, booleans, etc.) in JavaScript are immutable.
