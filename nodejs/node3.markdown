@@ -268,7 +268,7 @@ The event loop begins processing tasks in the following order:
 
 ---
 
-##  Thread Pool Offloading
+## 7. Thread Pool Offloading
 
 CPU-intensive tasks are offloaded from the main thread to the thread pool to avoid blocking the event loop. Common tasks include:
 
@@ -279,3 +279,11 @@ CPU-intensive tasks are offloaded from the main thread to the thread pool to avo
 
 > These tasks are handled by the thread pool (default size: 4 threads, adjustable via `UV_THREADPOOL_SIZE`).  
 > Once complete, the results are sent back to the event loop for callback execution.
+
+---
+
+## 8. Drawbacks of Thread Pool
+
+- **Limited workers**: The thread pool has only **4 workers by default**.  
+- **Blocking tasks delay**: If too many CPU-intensive or blocking tasks arrive at the same time, they have to wait in the queue.  
+- **Performance impact**: This can **slow down** the overall application performance if the thread pool is overloaded.
