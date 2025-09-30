@@ -209,3 +209,73 @@ The Node.js event loop has the following phases:
 4. **Poll**: Fetches new I/O events and executes I/O-related callbacks.
 5. **Check**: Executes `setImmediate` callbacks.
 6. **Close Callbacks**: Executes callbacks for closed resources (e.g., `socket.on('close', ...)`).
+
+
+
+# Node.js Main Thread and Event Loop Execution Flow
+
+The main thread in Node.js handles the JavaScript execution and orchestrates the event loop. Here's how it works:
+
+---
+
+## 1. Initialize Project
+
+- Node.js starts by initializing the runtime environment.
+
+---
+
+## 2. Top-Level Code
+
+- Executes synchronous code at the top level of the script (e.g., variable declarations, function definitions).
+
+---
+
+## 3. Require Modules
+
+- Loads required modules (e.g., `crypto`, `fs`, `os`) synchronously during the initialization phase.
+
+---
+
+## 4. Event Callback Registration
+
+- Registers callbacks for asynchronous operations (e.g., `setTimeout`, `setImmediate`, I/O events).
+
+---
+
+## 5. Start Event Loop
+
+The event loop begins processing tasks in the following order:
+
+1. **Expired Timer Callbacks**  
+   Executes `setTimeout` and `setInterval` callbacks that have reached their timeout.
+
+2. **I/O Polling**  
+   Handles I/O-related callbacks (e.g., file reads, network requests).
+
+3. **Set Immediate Callbacks**  
+   Executes `setImmediate` callbacks in the check phase.
+
+4. **Close Callbacks**  
+   Runs callbacks for closed resources (e.g., `socket.on('close', ...)`).
+
+---
+
+## 6. Task Completion Check
+
+- After each phase, Node.js checks if there are pending tasks (timers, I/O, or callbacks).  
+- **No pending tasks:** The event loop exits, and the process terminates.  
+- **Pending tasks:** The event loop continues to the next iteration.
+
+---
+
+##  Thread Pool Offloading
+
+CPU-intensive tasks are offloaded from the main thread to the thread pool to avoid blocking the event loop. Common tasks include:
+
+- **Crypto**: Operations like `crypto.pbkdf2` for hashing.  
+- **File System (fs)**: Reading or writing large files.  
+- **OS**: System-level operations using the `os` module.  
+- **Compression**: Tasks like `zlib` compression/decompression.
+
+> These tasks are handled by the thread pool (default size: 4 threads, adjustable via `UV_THREADPOOL_SIZE`).  
+> Once complete, the results are sent back to the event loop for callback execution.
