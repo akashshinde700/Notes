@@ -22,36 +22,104 @@ p {
 
 ---
 
-## 2. Types of CSS
+# Types of CSS
+
+CSS (Cascading Style Sheets) is used to style HTML elements. There are **three main types of CSS**:
+
 1. **Inline CSS**
-CSS is written inside the HTML tag.
-Affects only that element.
-
-   ```html
-   <h1 style="color: red;">Hello World</h1>
-   ```
-
 2. **Internal CSS**
-CSS is written inside the <style> tag in the same HTML file.
-Works for the whole page.
-
-   ```html
-   <style>
-       h1 {
-           color: blue;
-       }
-   </style>
-   ```
-
 3. **External CSS**
-CSS is written in a separate .css file.
-Linked to the HTML file.
-Best for big websites.
-   ```html
-   <link rel="stylesheet" href="style.css">
-   ```
 
 ---
+
+## 1. Inline CSS
+
+### 📖 Description
+- CSS is written **inside the HTML tag** using the `style` attribute.  
+- It affects **only that specific element**.  
+- Useful for **quick, one-time styling**.
+
+### 📝 Example
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inline CSS Example</title>
+</head>
+<body>
+    <h1 style="color: red;">Hello World</h1>
+    <p style="color: blue; font-size: 16px;">This is an inline styled paragraph.</p>
+</body>
+</html>
+```
+
+## Internal CSS
+
+### 📖 Description
+- Internal CSS is written inside a `<style>` tag within the **same HTML file**.
+- Useful when styling a **single page** without creating a separate CSS file.
+- All styles inside the `<style>` tag apply **only to elements on that page**.
+
+### 📝 Example
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Internal CSS Example</title>
+    <style>
+        h1 {
+            color: blue;
+            text-align: center;
+        }
+        p {
+            color: green;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <p>This paragraph is styled using Internal CSS.</p>
+</body>
+</html>
+```
+
+## External CSS
+
+### 📖 Description  
+- External CSS means writing CSS in a **separate file** (with `.css` extension).  
+- The CSS file is then **linked** to the HTML file using the `<link>` tag inside `<head>`.  
+- This is the **best practice** for big projects because the same CSS file can style **multiple web pages**.  
+- It keeps code **clean, reusable, and easy to maintain**.  
+
+### 📝 Example (HTML + CSS Files)
+
+**index.html**
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>External CSS Example</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Hello World</h1>
+    <p>This is styled using External CSS.</p>
+</body>
+</html>
+```
+
+**style.css**
+```css
+h1 {
+    color: purple;
+    text-align: center;
+}
+p {
+    color: darkgreen;
+    font-size: 18px;
+}
+```
 
 ## 3. Color Property
 Used to set the text color.
@@ -418,4 +486,3 @@ Aligns items horizontally along the main axis.
 | `center`         | Center                           |
 | `space-between`  | Equal space between items        |
 | `space-around`   | Equal space around items         |
-
