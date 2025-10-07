@@ -1,0 +1,119 @@
+🛣️ What is the path module?
+
+The path module in Node.js helps you work with file and folder paths easily.
+It makes your code work on Windows, Mac, and Linux without worrying about slashes (/ or \).
+
+📦 How to use it?
+
+First, you need to import it:
+
+const path = require('path');
+
+🧰 Common Methods with Code Examples
+1. ✅ path.basename()
+
+Use: Get only the file name from a path.
+
+const path = require('path');
+
+const fileName = path.basename('/home/user/file.txt');
+console.log(fileName); // Output: file.txt
+
+2. ✅ path.dirname()
+
+Use: Get the folder (directory) name from a path.
+
+const path = require('path');
+
+const folderName = path.dirname('/home/user/file.txt');
+console.log(folderName); // Output: /home/user
+
+3. ✅ path.extname()
+
+Use: Get the file extension only.
+
+const path = require('path');
+
+const extension = path.extname('file.txt');
+console.log(extension); // Output: .txt
+
+4. ✅ path.join()
+
+Use: Join multiple path parts to make a single valid path.
+
+const path = require('path');
+
+const fullPath = path.join('home', 'user', 'file.txt');
+console.log(fullPath); // Output: home/user/file.txt
+
+
+🔹 It adds the right slash (/ or \) depending on your OS.
+
+5. ✅ path.resolve()
+
+Use: Gives the full absolute path.
+
+const path = require('path');
+
+const absolutePath = path.resolve('file.txt');
+console.log(absolutePath);
+// Output: /your/current/folder/file.txt
+
+
+🔹 It starts from the current folder and gives the complete path.
+
+6. ✅ path.parse()
+
+Use: Breaks the path into parts (object format).
+
+const path = require('path');
+
+const parsed = path.parse('/home/user/file.txt');
+console.log(parsed);
+
+
+🔹 Output:
+
+{
+  root: '/',            // Root of the path
+  dir: '/home/user',    // Folder path
+  base: 'file.txt',     // File name + extension
+  ext: '.txt',          // Extension
+  name: 'file'          // File name only
+}
+
+7. ✅ path.format()
+
+Use: Opposite of parse(). It joins parts into a full path.
+
+const path = require('path');
+
+const obj = {
+  dir: '/home/user',
+  name: 'file',
+  ext: '.txt'
+};
+
+const fullPath = path.format(obj);
+console.log(fullPath); // Output: /home/user/file.txt
+
+🧠 Why use path module?
+
+Works on every OS (Windows, Mac, Linux)
+
+You don’t need to worry about slashes
+
+Makes code cleaner, safe, and error-free
+
+📝 Summary Table
+What You Want	Use This Method	Example	Output
+Get file name	basename()	basename('/a/b/file.txt')	'file.txt'
+Get folder name	dirname()	dirname('/a/b/file.txt')	'/a/b'
+Get extension	extname()	extname('file.txt')	'.txt'
+Join paths	join()	join('a','b','file.txt')	'a/b/file.txt'
+Get full path	resolve()	resolve('file.txt')	'/full/path/file.txt'
+Break path	parse()	parse('/a/b/file.txt')	{...}
+Build path	format()	format({...})	'/a/b/file.txt'
+✅ Final Tip:
+
+If you're working with file systems (reading, writing files), always use the path module to avoid errors across operating systems.
