@@ -24,11 +24,17 @@ p {
 
 ## 2. Types of CSS
 1. **Inline CSS**
+CSS is written inside the HTML tag.
+Affects only that element.
+
    ```html
    <h1 style="color: red;">Hello World</h1>
    ```
 
 2. **Internal CSS**
+CSS is written inside the <style> tag in the same HTML file.
+Works for the whole page.
+
    ```html
    <style>
        h1 {
@@ -38,6 +44,9 @@ p {
    ```
 
 3. **External CSS**
+CSS is written in a separate .css file.
+Linked to the HTML file.
+Best for big websites.
    ```html
    <link rel="stylesheet" href="style.css">
    ```
