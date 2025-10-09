@@ -35,7 +35,4 @@
 // });
 
 
-var title = "learn javascript";
-var title = "learn javascript again"; // Redeclaring a var variable
-title = "learn javascript once more"; // Reassigning a var variable
-// console.log(title); // Output: learn javascript once more
+
