@@ -76,3 +76,81 @@ Use **Conditional Formatting**:
    ```excel
    =$N2="Fail"
 4.Set format (e.g., red fill)
+
+# 🔢 Excel Fill Handle – Pattern Detection in Simple English
+
+The **Fill Handle** in Excel (the small square in the corner of a selected cell) can detect patterns when you select two or more cells and **drag down or across**.
+
+It tries to **continue the pattern** it sees.
+
+---
+
+## 🧠 What Does Excel Check?
+
+When you select two numbers and drag the fill handle, Excel looks for:
+
+- ➕ Addition
+- ➖ Subtraction
+- ✖️ Multiplication (like tables)
+- 🔁 Series (like dates, weekdays)
+
+Then it continues that pattern for the next cells.
+
+---
+
+## ✅ Examples in Simple English
+
+### ➤ Example 1: Table of 2
+
+
+---
+
+## 📊 Summary Table
+
+| First Value | Second Value | Pattern Detected | Output                   |
+|-------------|---------------|------------------|---------------------------|
+| 2           | 4             | +2               | 2, 4, 6, 8, 10...         |
+| 3           | 6             | +3               | 3, 6, 9, 12, 15...        |
+| 10          | 5             | −5               | 10, 5, 0, -5, -10...      |
+| 1           | 2             | +1               | 1, 2, 3, 4, 5...          |
+| 5           | 10            | +5               | 5, 10, 15, 20...          |
+
+---
+
+## 🖱️ How to Use Fill Handle
+
+1. Enter two values in two cells (one below the other).
+2. Select both cells.
+3. Move your mouse to the **bottom-right corner** until it turns into a **+ (plus sign)**.
+4. **Drag down** to continue the pattern.
+
+---
+
+## ✅ Tips
+
+- Works with numbers, dates, days of week, months, etc.
+- Can also be used for **custom lists**.
+- You can **double-click** the fill handle to auto-fill down based on the adjacent column's length.
+
+---
+
+## ⚙️ Enable Fill Handle (if not working)
+
+> File → Options → Advanced → ✅ Enable fill handle and cell drag-and-drop
+
+---
+
+## 📌 Use Case: Multiplication Tables
+
+Try these:
+
+| A1 | A2 | Drag Result            |
+|----|----|------------------------|
+| 4  | 8  | 12, 16, 20, ... (×4)   |
+| 7  | 14 | 21, 28, 35, ... (×7)   |
+
+---
+
+📁 Save this file as `excel_fill_handle.md` and view in **VS Code** or any Markdown viewer.
+
+
