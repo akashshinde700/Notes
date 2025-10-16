@@ -61,6 +61,7 @@ function test() {
   const z = 3;
   console.log(x, y, z); // Output: 1, 2, 3
 }
+test()
 
 // console.log(x, y, z); // ❌ ReferenceError: x, y, z are not defined
 ```
